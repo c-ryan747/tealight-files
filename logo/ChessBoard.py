@@ -15,6 +15,7 @@ def chessBoard(gridSize, boxSize):
   move(boxSize)
   turn(-90)
   move(boxSize*gridSize)
+  turn(180)
 
      
  #face down
