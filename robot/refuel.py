@@ -15,9 +15,10 @@ def find_fruit():
       turn(1)
   return False
 
-print(find_fruit())
+
 while True:
   if (not find_fruit()):
+    print("h")
     if (left_side() != "wall"):
       turn(-1)
     elif (touch() == "wall" and right_side() != "wall"):
