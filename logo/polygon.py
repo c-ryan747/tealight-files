@@ -7,3 +7,5 @@ def polygon(edges, size):
     turn(angle)
     
 polygon(6,150)
+
+polygon(360,150)
