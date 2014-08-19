@@ -20,6 +20,6 @@ def chessBoard(gridSize, boxSize):
     turn(90)
 
      
+turn(180) #face down
+drawSquare(50)
 move(100)
-turn(90)
-move(10)
