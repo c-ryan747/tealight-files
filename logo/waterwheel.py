@@ -8,8 +8,8 @@ def square(side):
     
 def triangle(side):
   for i in range(0,3):
-    move(side)
     turn(120)
+    move(side)
 
 def waterwheel(edges, size):
   angle = 360 / edges
