@@ -7,11 +7,10 @@ from tealight.robot import (move,
                             right_side)
 
 # Add your code here
-for i in xrange(1,8):
+def moveGuy():
   move()
+  if (right_side != "wall"):
+    turn(1)
+  moveGuy()
   
-print(look())
-print(touch())
-print(smell())
-print(left_side())
-print(right_side())
+moveGuy()
