@@ -11,4 +11,3 @@ while True:
   move()
   if (right_side() != "wall"):
     turn(1)
-  move_guy()
