@@ -25,3 +25,4 @@ turn(180) #face down
 for i in xrange(0,5):
   drawSquare(50)
   move(50)
+move(50)
