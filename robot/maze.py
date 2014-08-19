@@ -9,3 +9,5 @@ from tealight.robot import (move,
 # Add your code here
 for i in xrange(1,8):
   move()
+  
+look()
