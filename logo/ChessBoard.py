@@ -7,9 +7,20 @@ def whiteSquare(size): #starts + ends top left
     turn(-90)
     
 def blackSquare(size): #starts + ends top left
-  for i in xrange(0,4):
+  for i in xrange(0,size):
     move(size)
-    turn(-90)  
+    turn(-90)
+    move(1)
+    turn(-90)
+  if (size%2 == 1):
+    move(size)
+    turn(90)
+    move(size)
+  else:
+    turn(90)
+    move(size)
+    
+  
     
 def chessBoard(gridSize, boxSize):
   for j in xrange(0,gridSize):
