@@ -8,22 +8,13 @@ def drawSquare(size): #starts + ends top left
     
 def chessBoard(gridSize, boxSize):
   for i in xrange(0,gridSize):
-    for j in xrange(0,gridSize):
-      drawSquare(boxSize)
-      move(boxSize)
-    if (i%2 == 0):
-      turn(90)
-    else:
-      turn(270)
-    
-    move(boxSize*2)
-    turn(90)
+    drawSquare(boxSize)
+    move(boxSize)
+  turn(-90)
+  move(boxSize)
+  turn(-90)
+  move(boxSize*gridSize)
 
      
 turn(180) #face down
 
-for i in xrange(0,5):
-  drawSquare(50)
-  move(50)
-turn(-90)
-move(50)
