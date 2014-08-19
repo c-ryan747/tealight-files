@@ -28,12 +28,12 @@ def test_way():
 
 def left_way():
   while True:
-  move()
-  if (left_side() != "wall"):
-    turn(-1)
-  elif (touch() == "wall" and right_side() != "wall"):
-    turn(1)
-  elif (touch() == "wall"):
-    turn(2)
+    move()
+    if (left_side() != "wall"):
+      turn(-1)
+    elif (touch() == "wall" and right_side() != "wall"):
+      turn(1)
+    elif (touch() == "wall"):
+      turn(2)
     
 left_way()
