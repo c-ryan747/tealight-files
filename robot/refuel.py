@@ -10,7 +10,7 @@ from tealight.robot import (move,
 def find_fruit():
   for i in range(1,4):
     if (look() == "fruit"):
-      move(1)
+      move()
       return True
     else:
       turn(1)
