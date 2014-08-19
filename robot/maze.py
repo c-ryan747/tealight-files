@@ -9,7 +9,7 @@ from tealight.robot import (move,
 # Add your code here
 def moveGuy():
   move()
-  if (right_side != "wall"):
+  if (right_side() != "wall"):
     turn(1)
   moveGuy()
   
