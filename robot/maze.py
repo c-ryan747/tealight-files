@@ -10,8 +10,8 @@ from tealight.robot import (move,
 for i in xrange(1,8):
   move()
   
-look()
-touch()
-smell()
-left_side()
-right_side()
+print(look())
+print(touch())
+print(smell())
+print(left_side())
+print(right_side())
