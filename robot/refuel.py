@@ -15,15 +15,25 @@ def find_fruit():
       turn(1)
   return False
 
+def test_way():
+  while True:
+    if (find_fruit() == False):
+      if (left_side() != "wall"):
+        turn(-1)
+      elif (touch() == "wall" and right_side() != "wall"):
+        turn(1)
+      elif (touch() == "wall"):
+        turn(2)
+      move()
 
-while True:
-  if (find_fruit() == False):
-    print(22)
-    if (left_side() != "wall"):
-      turn(-1)
-    elif (touch() == "wall" and right_side() != "wall"):
-      turn(1)
-    elif (touch() == "wall"):
-      turn(2)
-    move()
-
+def left_way():
+  while True:
+  move()
+  if (left_side() != "wall"):
+    turn(-1)
+  elif (touch() == "wall" and right_side() != "wall"):
+    turn(1)
+  elif (touch() == "wall"):
+    turn(2)
+    
+left_way()
