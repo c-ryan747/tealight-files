@@ -9,10 +9,11 @@ from tealight.robot import (move,
 # Following left wall score = 46
 def find_fruit():
   for i in range(1,4):
-    turn(1)
     if (look() == "fruit"):
+      turn(1)
       return True
-      
+    else:
+      turn(1)
   return False
 
 def test_way():
