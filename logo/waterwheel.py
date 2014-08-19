@@ -6,10 +6,6 @@ def square(side):
     move(side)
     turn(90)
     
-def triangle(side):
-  for i in range(0,3):
-    move(side)
-    turn(120)
     
 def shape(side,edges):
   for i in xrange(0,edges):
