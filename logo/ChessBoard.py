@@ -18,3 +18,4 @@ def chessBoard(gridSize, boxSize):
      
 turn(180) #face down
 chessBoard(5,50)
+move(500)
