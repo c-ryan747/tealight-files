@@ -5,6 +5,7 @@ def drawSquare(size): #starts + ends top left
   for i in xrange(0,4):
     move(size)
     turn(90)
+   turn(30)
     
 def chessBoard(gridSize, boxSize):
   for i in xrange(0,gridSize):
