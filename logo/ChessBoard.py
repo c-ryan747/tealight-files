@@ -3,7 +3,7 @@ from tealight.logo import (move, turn)
 
 def drawSquare(size):
   for i in xrange(0,4):
-    move(side)
+    move(size)
     turn(90)
     
 def chessBoard(gridSize, boxSize):
