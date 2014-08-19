@@ -1,7 +1,7 @@
 from tealight.logo import (move, turn)
 
 
-def drawSquare(size):
+def drawSquare(size): #starts + ends top left
   for i in xrange(0,4):
     move(size)
     turn(90)
@@ -20,4 +20,6 @@ def chessBoard(gridSize, boxSize):
     turn(90)
 
      
-chessBoard(6,10)
+move(100)
+turn(90)
+move(10)
