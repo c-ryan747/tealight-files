@@ -17,3 +17,5 @@ while True:
     turn(-1)
   elif (touch() == "wall" and right_side() != "wall"):
     turn(1)
+  elif (touch() == "wall"):
+    turn(2)
