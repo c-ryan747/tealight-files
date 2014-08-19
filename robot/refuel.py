@@ -25,4 +25,5 @@ while True:
       turn(1)
     elif (touch() == "wall"):
       turn(2)
+    move()
 
