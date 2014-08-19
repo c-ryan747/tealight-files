@@ -17,7 +17,7 @@ def find_fruit():
 
 
 while True:
-  if (NOT find_fruit()):
+  if (not find_fruit()):
     if (left_side() != "wall"):
       turn(-1)
     elif (touch() == "wall" and right_side() != "wall"):
