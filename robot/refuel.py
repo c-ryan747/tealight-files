@@ -39,5 +39,5 @@ def left_way():
     elif (touch() == "wall"):
       turn(2)
     
-turn(-1)
+
 test_way()
