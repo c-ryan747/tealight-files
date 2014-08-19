@@ -19,7 +19,9 @@ def find_fruit():
 def test_way():
   while True:
     if (find_fruit() == False):
-      if (left_side() != "wall"):
+      if (touch() != "wall"):
+        a=1
+      elif (left_side() != "wall"):
         turn(-1)
       elif (touch() == "wall" and right_side() != "wall"):
         turn(1)
