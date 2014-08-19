@@ -15,7 +15,7 @@ def find_fruit():
       turn(1)
   return False
 
-
+print(find_fruit())
 while True:
   if (not find_fruit()):
     if (left_side() != "wall"):
