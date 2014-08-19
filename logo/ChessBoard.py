@@ -12,7 +12,8 @@ def chessBoard(gridSize, boxSize):
       drawSquare(boxSize)
       move(boxSize)
     turn(90)
-    move(boxSize+200)
+    move(boxSize)
+    turn(90)
 
      
 chessBoard(5,10)
