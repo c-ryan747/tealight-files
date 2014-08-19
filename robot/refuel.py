@@ -13,8 +13,15 @@ def find_fruit():
       return True
     else:
       turn(1)
+  return False
 
 
 while True:
-  find_fruit()
+  if (!find_fruit()):
+    if (left_side() != "wall"):
+      turn(-1)
+    elif (touch() == "wall" and right_side() != "wall"):
+      turn(1)
+    elif (touch() == "wall"):
+      turn(2)
 
