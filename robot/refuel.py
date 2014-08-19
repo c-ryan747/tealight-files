@@ -23,9 +23,9 @@ def test_way():
         a=1
       elif (left_side() != "wall"):
         turn(-1)
-      elif (touch() == "wall" and right_side() != "wall"):
+      elif (right_side() != "wall"):
         turn(1)
-      elif (touch() == "wall"):
+      elif ("wall"):
         turn(2)
       move()
 
