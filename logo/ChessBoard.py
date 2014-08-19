@@ -22,6 +22,6 @@ def chessBoard(gridSize, boxSize):
      
 turn(180) #face down
 
-
-drawSquare(50)
-move(50)
+for i in xrange(0,5)
+  drawSquare(50)
+  move(50)
