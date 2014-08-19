@@ -20,4 +20,4 @@ def chessBoard(gridSize, boxSize):
     turn(90)
 
      
-chessBoard(5,10)
+chessBoard(6,10)
