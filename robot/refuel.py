@@ -21,10 +21,10 @@ def test_way():
     if (find_fruit() == False):
       if (touch() != "wall"):
         a=1
-      elif (left_side() != "wall"):
-        turn(-1)
       elif (right_side() != "wall"):
         turn(1)
+      elif (left_side() != "wall"):
+        turn(-1)
       elif ("wall"):
         turn(2)
       move()
