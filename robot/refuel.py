@@ -10,14 +10,15 @@ from tealight.robot import (move,
 def find_fruit():
   for i in range(1,4):
     if (look() == "fruit"):
-      return False
+      return True
     else:
       turn(1)
-  return True
+  return False
 
 
 while True:
-  if (find_fruit()):
+  if (find_fruit() == False):
+    print(22)
     if (left_side() != "wall"):
       turn(-1)
     elif (touch() == "wall" and right_side() != "wall"):
