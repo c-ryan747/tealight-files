@@ -37,4 +37,4 @@ def left_way():
     elif (touch() == "wall"):
       turn(2)
     
-test_way()
+find_fruit()
