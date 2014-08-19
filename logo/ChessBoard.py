@@ -7,7 +7,7 @@ def drawSquare(size):
     turn(90)
     
 def chessBoard(gridSize, boxSize):
-  for i in xrange(1,2):
+  for i in xrange(1,3):
     for j in xrange(1,gridSize):
       drawSquare(boxSize)
       move(boxSize)
