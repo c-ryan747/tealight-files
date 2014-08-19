@@ -7,10 +7,8 @@ from tealight.robot import (move,
                             right_side)
 
 # Add your code here
-def moveGuy():
+while True:
   move()
   if (right_side() != "wall"):
     turn(1)
-  moveGuy()
-  
-moveGuy()
+  move_guy()
