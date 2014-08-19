@@ -6,6 +6,6 @@ def polygon(edges, size):
     move(size)
     turn(angle)
     
-polygon(6,150)
+polygon(6,150) #
 
 polygon(360,150/(360/6))
