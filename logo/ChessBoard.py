@@ -13,7 +13,7 @@ def chessBoard(gridSize, boxSize):
       move(boxSize)
     turn(90)
     move(boxSize)
-    turn(90)
+    turn(180)
     move(boxSize*gridSize)
     turn(-90)
      
