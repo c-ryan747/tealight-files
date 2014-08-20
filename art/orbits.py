@@ -52,9 +52,9 @@ def apply_gravity():
   deltay = 200-y
   
   
-  
-  vx = vx + gravity*(deltax/(deltax + deltay))
-  vy = vy + gravity*(deltax/(deltax + deltay))
+  try:
+    vx = vx + gravity*(deltax/(deltax + deltay))
+    vy = vy + gravity*(deltax/(deltax + deltay))
   
   
 def handle_frame():
