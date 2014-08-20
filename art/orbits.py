@@ -52,10 +52,6 @@ def apply_gravity():
   deltay = 200-y
   
   
-  if deltax!=0 and deltay!=0 and (deltax + deltay)!=0:
-    vx = vx + gravity*(deltax/(deltax + deltay))
-    vy = vy + gravity*(deltax/(deltax + deltay))
-  
   
 def handle_frame(): 
   global x,y,vx,vy,ax,ay
