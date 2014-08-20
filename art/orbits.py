@@ -7,7 +7,7 @@ vy = 0
 ax = 0
 ay = 0
 
-power = 0.3
+power = 0.4
 friction = 0.1
 gravity = 0.2
 
