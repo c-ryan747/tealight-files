@@ -3,5 +3,5 @@ from tealight.art import (color, line, spot, circle, box, image, text, backgroun
 color("blue")
 
 spot(200,200,25)
-circle(200,200,50)
 box(150,150,100,100)
+circle(200,200,50)
