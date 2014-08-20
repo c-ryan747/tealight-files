@@ -57,7 +57,7 @@ def apply_gravity():
     vy = vy + gravity*(deltax/(deltax + deltay))
   
   
-def handle_frame():
+def handle_frame(): 
   global x,y,vx,vy,ax,ay
   
   color("white")
