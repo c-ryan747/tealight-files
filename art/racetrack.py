@@ -5,7 +5,7 @@ from math import sin, cos, pi
 
 def draw_car(x,y,angle, col):
   color(col)
-  line(x,y,100*sin(angle)+x,100*cos(angle)+y)
+  line(x,y,x-100*sin(angle),y-100*cos(angle))
   
   
   
