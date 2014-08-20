@@ -32,7 +32,7 @@ def handle_keyup(key):
   elif key == "up" or key == "down":
     ay = 0
     
-def apply_friction(velocity):
+def apply_friction(v):
   if v>0:
     if v>friction:
       v = v - friction
