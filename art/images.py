@@ -32,5 +32,8 @@ def diagonal():
       else:
         image(x + i * 60, y + j * 60, "misc/Clover.png")
       is_yellow = not is_yellow
+    if (height%2==0):
+      is_yellow = not is_yellow
+      
         
 diagonal()
