@@ -37,4 +37,4 @@ def diagonal():
       is_yellow = not is_yellow
       
         
-diagonal()
+vertical()
