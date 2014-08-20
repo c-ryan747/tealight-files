@@ -22,12 +22,12 @@ def horizontal():
       else:
         image(x + i * 60, y + j * 60, "misc/Clover.png")
         
-def diagonal():
+def diagonal(spacing):
   for i in range(0,width):
     for j in range(0,height):
-      if (i+j) % 2 == 0:
+      if (i+j) % spacing == 0:
         image(x + i * 60, y + j * 60, "misc/YellowFlower.png")
       else:
         image(x + i * 60, y + j * 60, "misc/Clover.png")
         
-diagonal()
+diagonal(3)
