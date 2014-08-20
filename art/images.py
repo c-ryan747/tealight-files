@@ -23,18 +23,11 @@ def horizontal():
         image(x + i * 60, y + j * 60, "misc/Clover.png")
         
 def diagonal():
-  is_yellow = False
   for i in range(0,width):
     for j in range(0,height):
-      if is_yellow == True:
+      if (i+j) % 2 == 0:
         image(x + i * 60, y + j * 60, "misc/YellowFlower.png")
       else:
         image(x + i * 60, y + j * 60, "misc/Clover.png")
-      is_yellow = False
-      if j%4 == 0:
-        is_yellow = True
-    if height%2 == 0:
-      is_yellow = not is_yellow
-      
         
-vertical()
+diagonal()
