@@ -9,7 +9,8 @@ def star(x, y, c, size, spines):
   angle = 0
   
   for i in range(0, spines):
-    x0 = x + (size * cos(angle))
+    
+    x0 = x + (size * cos(angle)* cos(angle)
     y0 = y + (size * sin(angle))
     
     line(x, y, x0, y0)
@@ -17,5 +18,5 @@ def star(x, y, c, size, spines):
     angle = angle + (2 * pi / spines)
 
 star(300, 300, "blue", 100, 50)
-star(600, 400, "purple", 200, 100)
-star(450, 200, "orange", 125, 30)
+#star(600, 400, "purple", 200, 100)
+#star(450, 200, "orange", 125, 30)
