@@ -9,4 +9,4 @@ def draw_car(x,y,angle, col):
   
   
   
-draw_car(200,200,pi,"black")
+draw_car(200,200,pi/2,"black")
