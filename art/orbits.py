@@ -51,7 +51,7 @@ def apply_gravity (xp,yp):
   deltax = x-xp
   deltay = y-yp
   
-  vx = vx + gravity*
+  vx = vx + gravity*1
   
 
   
