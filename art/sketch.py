@@ -11,7 +11,7 @@ def handle_mousedown(x,y):
   lastx = x
   lasty = y
 
-def draw_to(x,y)
+def draw_to(x,y):
   global lastx, lasty
   
   line(lastx, lasty, x, y)
