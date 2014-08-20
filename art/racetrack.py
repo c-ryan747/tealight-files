@@ -1,3 +1,3 @@
 from tealight.art import (color, image, line, spot, circle, box, image, text, background)
 
-background ("misc/Track.png")
+background ("Track.png")
