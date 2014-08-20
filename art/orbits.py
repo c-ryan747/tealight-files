@@ -46,14 +46,14 @@ def apply_friction(v):
       v = 0
   return v
 
-def apply_gravity (v,xp,yp):
-  global x,y
-  deltax = math.abs(x-xp)
-  deltay = math.abs(y-yp)
+def apply_gravity (xp,yp):
+  global x,y,vx,vy
+  deltax = x-xp
+  deltay = y-yp
   
+  vx = vx + gravity*
   
-  
-  return v
+
   
 def handle_frame():
   global x,y,vx,vy,ax,ay
