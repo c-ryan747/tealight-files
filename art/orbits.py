@@ -43,7 +43,7 @@ def apply_friction(velocity):
       v = v + friction
     else:
       v = 0
- return v
+  return v
   
 def handle_frame():
   global x,y,vx,vy,ax,ay
