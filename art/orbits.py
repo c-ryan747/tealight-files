@@ -32,6 +32,19 @@ def handle_keyup(key):
   elif key == "up" or key == "down":
     ay = 0
     
+def apply_friction(velocity):
+  if v>0:
+    if v>friction:
+      v = v - friction
+    else:
+      v = 0
+  elif v<0:
+    if v<-friction:
+      v = v + friction
+    else:
+      v = 0
+ return v
+  
 def handle_frame():
   global x,y,vx,vy,ax,ay
   
@@ -43,6 +56,9 @@ def handle_frame():
     
   vx = vx + ax
   vy = vy + ay + gravity
+  
+  vx = apply_friction(vx)
+  vy = apply_friction(vy)
   
   x = x + vx
   y = y + vy
