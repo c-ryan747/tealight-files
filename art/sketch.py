@@ -11,16 +11,23 @@ def handle_mousedown(x,y):
   lastx = x
   lasty = y
 
-def handle_mousemove(x,y,button):
+def draw_to(x,y)
   global lastx, lasty
-  
-  if button == "right":
-    color("black")
-  else:
-    color("red")
   
   line(lastx, lasty, x, y)
   lastx = x
   lasty = y
+  
+  
+  
+def handle_mousemove(x,y,button):
+  if button == "right":
+    color("black")
+    draw_to(x,y)
+  elif button == "left":
+    color("red")
+    draw_to(x,y)
+  
+
  
   
