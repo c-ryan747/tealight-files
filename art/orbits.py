@@ -8,8 +8,8 @@ ax = 0
 ay = 0
 
 power = 0.3
-friction = 0.25
-gravity = 0.6
+friction = 0.1
+gravity = 0.2
 
 def handle_keydown(key):
   global ax, ay
