@@ -7,4 +7,7 @@ def draw_car(x,y,angle, col):
   color(col)
   line(x,y,100*sin(angle),100*cos(angle))
   
+  
+print(sin(0))
+  
 draw_car(200,200,0,"black")
