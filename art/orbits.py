@@ -15,7 +15,6 @@ gravity = 0.2
 def handle_keydown(key):
   global ax, ay
   
-
   if key == "left":
     ax = -power
   elif key == "right":
@@ -62,7 +61,6 @@ def handle_frame():
   
   spot(x,y,8)
   
-    
     
   vx = vx + ax
   vy = vy + ay
