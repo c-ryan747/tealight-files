@@ -55,10 +55,15 @@ def handle_frame():
     
     
   vx = vx + ax
-  vy = vy + ay + gravity
+  vy = vy + ay
   
+  #friction
   vx = apply_friction(vx)
   vy = apply_friction(vy)
+  
+  #gravity
+  vy = vy + gravity
+  
   
   x = x + vx
   y = y + vy
