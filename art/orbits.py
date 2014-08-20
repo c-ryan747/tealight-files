@@ -52,7 +52,7 @@ def apply_gravity():
   deltay = 200-y
   
   
-  try:
+  if deltax!=0 and deltay!=0 and (deltax + deltay)!=0:
     vx = vx + gravity*(deltax/(deltax + deltay))
     vy = vy + gravity*(deltax/(deltax + deltay))
   
