@@ -8,6 +8,7 @@ ax = 0
 ay = 0
 
 power = 0.3
+friction = 0.1
 
 def handle_keydown(key):
   global ax, ay
@@ -36,6 +37,13 @@ def handle_frame():
   color("white")
   
   spot(x,y,8)
+  
+  if ax>0:
+    ax = ax - friction
+  elif ax>0:
+    ax = ax + friction
+    
+    
   vx = vx + ax
   vy = vy + ay
   
