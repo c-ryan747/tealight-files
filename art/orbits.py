@@ -51,6 +51,8 @@ def apply_gravity():
   deltax = 300-x
   deltay = 200-y
   
+  vx = vx + deltax/5
+  vy = vy + deltay/5
   
   
 def handle_frame(): 
@@ -64,13 +66,16 @@ def handle_frame():
   vx = vx + ax
   vy = vy + ay
   
-  #friction
-  vx = apply_friction(vx)
-  vy = apply_friction(vy)
   
   #gravity
   vy = vy + gravity
   #apply_gravity()
+  
+  #friction
+  vx = apply_friction(vx)
+  vy = apply_friction(vy)
+  
+
   
   
   x = x + vx
