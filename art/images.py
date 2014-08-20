@@ -30,4 +30,4 @@ def diagonal(spacing):
       else:
         image(x + i * 60, y + j * 60, "misc/Clover.png")
         
-diagonal(3)
+diagonal(5)
