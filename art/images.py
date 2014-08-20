@@ -22,7 +22,6 @@ def horizontal():
       else:
         image(x + i * 60, y + j * 60, "misc/Clover.png")
         
-
 def diagonal():
   is_yellow = False
   for i in range(0,width):
