@@ -1,8 +1,8 @@
 from tealight.art import (color, line, spot, circle, box, image, text, background)
 import math
 
-x = 600
-y = 400
+x = 300
+y = 200
 vx = 0
 vy = 0
 ax = 0
@@ -46,7 +46,13 @@ def apply_friction(v):
   return v
 
 
-
+def apply_gravity (xp,yp):
+  global x,y,vx,vy
+  deltax = x-xp
+  deltay = y-yp
+  
+  vx = vx + gravity*1
+  
   
 def handle_frame():
   global x,y,vx,vy,ax,ay
