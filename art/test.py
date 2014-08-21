@@ -57,6 +57,6 @@ class car:
     self.draw(x,y,angle,"black")
     
   
-asd = car(100,100,0,"black")
+asd = car(100,100,0)
 
 car.move(150,150,0)
