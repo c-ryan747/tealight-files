@@ -57,7 +57,9 @@ class car:
     self.draw(x,y,angle,"black")
     
   
+colour("white")
 box(0,0,screen_width,screen_height)
+
 asd = car(100,100,pi/7)
 
 asd.move(150,150,0)
