@@ -14,10 +14,13 @@ class track:
     
     
   def create_polygons(self):
-    middle = [(screen_width/4,screen_height/4),
-              ((3*screen_width/4),screen_height/4),
+    middle = [(screen_width/4,screen_height/4)]
+    
+    middle.append(self.circle_points(5, screen_height/8,(5*screen_width)/8,(5*screen_height)/8,1))
+    
+    middle.append(((3*screen_width/4),screen_height/4),
               ((3*screen_width/4),(3*screen_height/4)),
-              (screen_width/4,(3*screen_height/4))]
+              (screen_width/4,(3*screen_height/4)))
     self.polygons.append(middle)
     
     self.top = [(0,0),
@@ -75,5 +78,15 @@ class track:
   
   def test_in_bottom_detector(self,x,y):
     return test_polygon(x,y,self.bottom_detector)
+  
+  def circle_points(self,amount, radius,cx,cy,corner):
+    array = []
+    for angle in xrange(0,pi/2,(pi/2)/amount):
+      x = sin(angle)*radius
+      y = cos(angle)*radius
+      if corner == 1:
+        array.append((x+cx,y+cy))
+        
+    return array
   
 ma = track()
