@@ -22,7 +22,7 @@ class car:
     
     self.draw_points(self.points,colour)
   
-  def draw_points(points,colour):
+  def draw_points(self,points,colour):
     color(colour)
     line(points[0],points[1],points[2],points[3])
     line(points[2],points[3],points[4],points[5])
