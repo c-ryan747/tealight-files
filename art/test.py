@@ -14,7 +14,13 @@ bottom = [(0,screen_height),
        (screen_width,(9*screen_height)/10),
        (0,(9*screen_height)/10)]
 
+left = [(0,0),
+       (0,screen_height),
+       (screen_width/10,screen_height),
+       (screen_width/10,0)]
+
 
 fill_polygon(middle)
 fill_polygon(top)
 fill_polygon(bottom)
+fill_polygon(left)
