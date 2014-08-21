@@ -53,7 +53,7 @@ class car:
     
   
   def move(self,x,y,angle):
-    self.removeGhosting(self.points,"white")
+    self.removeGhosting(self.points)
     self.draw(x,y,angle,"black")
     
   
