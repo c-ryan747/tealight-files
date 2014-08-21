@@ -52,6 +52,7 @@ class track:
     for i in self.polygons:
       fill_polygon(i)
       polygon(self.top_detector)
+      polygon(self.bottom_detector)
       
   def test_point(self,x,y):
     for i in self.polygons:
