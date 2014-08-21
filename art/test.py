@@ -1,4 +1,4 @@
-from tealight.art import polygon
+from tealight.art import polygon, screen_width, screen_height
 
-p = polygon([(1,1),(1,10),(10,10),(10,1)])
-polygon.test_polygon(2,2)
+polygon([(screen_width/4,screen_width/4),(1,10),(10,10),(10,1)])
+draw_polygon([])
