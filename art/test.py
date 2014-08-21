@@ -1,4 +1,4 @@
-  def circle_points(self,amount, radius,cx,cy,corner,array):
+  def circle_points(amount, radius,cx,cy,corner,array):
     angle = 0
     for i in xrange(1,amount):
       x = sin(angle)*radius
