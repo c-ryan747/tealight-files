@@ -61,6 +61,7 @@ class track:
     
     color("blue")
     for i in self.polygons:
+      print(i)
       fill_polygon(i)
     
     color("red")
