@@ -52,3 +52,4 @@ class map:
     
 mainMap = map()
 print (mainMap.test_point(1,1))
+print (mainMap.test_point(100,100))
