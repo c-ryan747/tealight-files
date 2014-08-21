@@ -16,4 +16,4 @@ class car:
   
 
 
-car.draw(200,200,pi)
+car.draw(200,200,pi/2)
