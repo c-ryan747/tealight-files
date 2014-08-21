@@ -12,7 +12,7 @@ class car:
     self.draw(x,y,angle,"black")
     
   def draw(self,x,y,angle,colour):
-    angle = angle + (pi/2)
+    angle = angle
     size = 100
 
     self.points = [x+size*cos(angle),
