@@ -9,7 +9,7 @@ class car:
   def __init__(self):
     return
   def draw(self,x,y,angle):
-    angle = -angle
+    angle = angle
     self.points = [x-100*sin(angle),
                    y-100*cos(angle),
                    x-100*sin(angle+(2*pi/3)),
