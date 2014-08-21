@@ -62,5 +62,5 @@ class track:
     
     
 mainMap = track()
-print (mainMap.test_in_detector(screen_width*0.47,screen_width/9)
+print (mainMap.test_in_detector(screen_width*0.47,screen_width/9))
 #print (mainMap.test_point(100,100))
