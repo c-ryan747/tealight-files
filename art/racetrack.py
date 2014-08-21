@@ -1,4 +1,5 @@
-from tealight.art import (sleep, color, image, line, spot, circle, box, image, text, background)
+from tealight.art import (color, image, line, spot, circle, box, image, text, background)
+from tealight.utils import sleep
 from math import sin, cos, pi
 
 #background ("track.png")
