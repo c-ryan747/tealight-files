@@ -1,3 +1,4 @@
+from math import pi,sin,cos
 
 amount = 5
 angle = 0 
