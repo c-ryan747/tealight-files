@@ -16,8 +16,8 @@ bottom = [(0,screen_height),
 
 left = [(screen_width,0),
        (screen_width,screen_height),
-       (screen_width/10,screen_height),
-       (screen_width/10,0)]
+       ((9*screen_width/10),screen_height),
+       ((9*screen_width/10),0)]
 
 right = [(0,0),
        (0,screen_height),
