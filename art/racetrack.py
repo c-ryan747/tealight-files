@@ -3,12 +3,6 @@ from math import sin, cos, pi
 
 #background ("track.png")
 
-def draw_car(x,y,angle, col):
-  color(col)
-  line(x-100*sin(angle),y-100*cos(angle),x,y)
-  line(,x,y)
-  line(,x,y)
-  
   
 class car:
   "Race car class"
@@ -23,3 +17,5 @@ class car:
   
   
 draw_car(200,200,0,"black")
+
+car = car(200,200,0)
