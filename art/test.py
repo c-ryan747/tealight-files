@@ -42,6 +42,13 @@ class map:
     color("blue")
     for i in self.polygons:
       fill_polygon(i)
+      
+  def test_point(x,y):
+    for i in self.polygons:
+      if test_polygon(x,y,i):
+        return False
+    return True
     
     
 mainMap = map()
+print (mainMap.test_point(1,1))
