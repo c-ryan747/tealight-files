@@ -35,4 +35,4 @@ class car:
   
 
 player1 = car(200,200,0)
-player1.move(200,200,pi/2)
+#player1.move(200,200,pi/2)
