@@ -19,18 +19,17 @@ class car:
                    y-100*cos(angle+(2*pi/3)),
                    x-100*sin(angle+(4*pi/3)),
                    y-100*cos(angle+(4*pi/3))]
-    self.x = x
-    self.y = y
-    self.angle = angle
     
+    self.draw_points(self.points,colour)
+  
+  def draw_points(points,colour):
     color(colour)
-    
-    line(self.points[0],self.points[1],self.points[2],self.points[3])
-    line(self.points[2],self.points[3],self.points[4],self.points[5])
-    line(self.points[4],self.points[5],self.points[0],self.points[1])
+    line(points[0],points[1],points[2],points[3])
+    line(points[2],points[3],points[4],points[5])
+    line(points[4],points[5],points[0],points[1])
   
   def move(self,x,y,angle):
-    self.draw(self.x,self.y,self.angle,"white")
+    self.draw_points(self.points,"white")
     self.draw(x,y,angle,"black")
     
   
