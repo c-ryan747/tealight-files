@@ -28,30 +28,7 @@ class car:
     line(points[0],points[1],points[2],points[3])
     line(points[2],points[3],points[4],points[5])
     line(points[4],points[5],points[0],points[1])
-    
-  def removeGhosting(self,points):
-    color("white")
-    line(points[0],points[1],points[2],points[3])
-    line(points[2],points[3],points[4],points[5])
-    line(points[4],points[5],points[0],points[1])
-    
-    line(points[0],points[1]-1,points[2],points[3]-1)
-    line(points[2],points[3]-1,points[4],points[5]-1)
-    line(points[4],points[5]-1,points[0],points[1]-1)
-    
-    line(points[0],points[1]+1,points[2],points[3]+1)
-    line(points[2],points[3]+1,points[4],points[5]+1)
-    line(points[4],points[5]+1,points[0],points[1]+1)
-    
-    line(points[0]-1,points[1],points[2]-1,points[3])
-    line(points[2]-1,points[3],points[4]-1,points[5])
-    line(points[4]-1,points[5],points[0]-1,points[1])
-    
-    line(points[0]+1,points[1],points[2]+1,points[3])
-    line(points[2]+1,points[3],points[4]+1,points[5])
-    line(points[4]+1,points[5],points[0]+1,points[1])
-    
-  
+
   def move(self,x,y,angle):
     self.removeGhosting(self.points)
     self.draw(x,y,angle,"black")
