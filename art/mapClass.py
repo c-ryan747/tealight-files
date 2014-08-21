@@ -40,8 +40,8 @@ class track:
     self.polygons.append(right)
     
     self.detector = [((screen_width*0.45),screen_width/10),
-                     ((screen_width*0.45),screen_width/5),
-                     ((screen_width*0.55),screen_width/5),
+                     ((screen_width*0.45),screen_width/4),
+                     ((screen_width*0.55),screen_width/4),
                      ((screen_width*0.55),screen_width/10)]
     
   def draw_polygons(self):
