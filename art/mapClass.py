@@ -61,10 +61,13 @@ class track:
     return True
   
   def test_in_top_detector(self,x,y):
-    return test_polygon(x,y,self.detector)
+    return test_polygon(x,y,self.top_detector)
+  
+  def test_in_bottom_detector(self,x,y):
+    return test_polygon(x,y,self.bottom_detector)
   
     
     
-mainMap = track()
+#mainMap = track()
 #print (mainMap.test_in_detector(screen_width*0.6,screen_width/9))
 #print (mainMap.test_point(100,100))
