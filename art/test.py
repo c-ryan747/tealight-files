@@ -1,5 +1,5 @@
 from tealight.art import color,box, polygon,fill_polygon,test_polygon, screen_width, screen_height
-
+from math import pi,sin,cos
 
 class track:
   "Some map disc"
