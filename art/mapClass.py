@@ -56,7 +56,7 @@ class track:
         return False
     return True
   
-  def test_in_detector(x,y):
+  def test_in_detector(self,x,y):
     return test_polygon(x,y,self.detector)
   
     
