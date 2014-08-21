@@ -7,6 +7,9 @@ class track:
     self.create_polygons()
     self.draw_polygons()
     
+    color("white")
+    box(0,0,screen_width,screen_height)
+    
   def create_polygons(self):
     middle = [(screen_width/4,screen_height/4),
               ((3*screen_width/4),screen_height/4),
@@ -48,8 +51,6 @@ class track:
                             ((screen_width*0.55),screen_height*0.9)]
     
   def draw_polygons(self):
-    color("white")
-    box(0,0,screen_width,screen_height)
     
     color("blue")
     for i in self.polygons:
