@@ -31,10 +31,10 @@ class track:
             ((9*screen_width/10),0)]
     self.polygons.append(left)
     
-    right = [(0,0),
+    right = [(0,screen_height/10),
              (0,screen_height),
              (screen_width/10,screen_height),
-             (screen_width/10,0)]
+             (screen_width/10,screen_height/10)]
     self.polygons.append(right)
     
     self.top_detector = [((screen_width*0.45),screen_height/10),
