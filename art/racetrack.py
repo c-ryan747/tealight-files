@@ -15,7 +15,6 @@ class car:
     line(x-100*sin(angle+(4*pi/3)),y-100*cos(angle+(4*pi/3)),x-100*sin(angle),y-100*cos(angle))
   
   
-  
-draw_car(200,200,0,"black")
+
 
 car = car(200,200,0)
