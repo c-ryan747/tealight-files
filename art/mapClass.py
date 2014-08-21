@@ -1,4 +1,4 @@
-from tealight.art import color, polygon,fill_polygon,test_polygon, screen_width, screen_height
+from tealight.art import color,box, polygon,fill_polygon,test_polygon, screen_width, screen_height
 
 class track:
   "Some map disc"
