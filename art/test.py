@@ -6,7 +6,7 @@ radius = 100
 
 print(pi/2)
 for i in xrange(1,amount+2):
-  print(angle)
+#  print(angle)
   
   x = sin(angle)*radius
   y = cos(angle)*radius
