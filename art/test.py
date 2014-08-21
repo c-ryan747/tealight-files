@@ -19,9 +19,10 @@ class track:
     
     middle.append(self.circle_points(5, screen_height/8,(5*screen_width)/8,(5*screen_height)/8,1))
     
-    middle.append(((3*screen_width/4),screen_height/4),
+    part = [((3*screen_width/4),screen_height/4),
               ((3*screen_width/4),(3*screen_height/4)),
-              (screen_width/4,(3*screen_height/4)))
+              (screen_width/4,(3*screen_height/4))]
+    middle.append(part)
     self.polygons.append(middle)
     
     self.top = [(0,0),
