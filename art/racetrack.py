@@ -24,4 +24,5 @@ class car:
   
 
 player1 = car()
+player1.draw(200,200,0)
 player1.draw(200,200,pi/2)
