@@ -1,6 +1,6 @@
 from tealight.art import color, polygon,fill_polygon,test_polygon, screen_width, screen_height
 
-class map:
+class track:
   "Some map disc"
   def __init__(self):
     self.polygons = []
