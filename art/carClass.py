@@ -44,7 +44,7 @@ class car:
     line(points[4]+1,points[5],points[0]+1,points[1])
   
   def move(self,x,y,angle):
-    self.draw_points(self.points,"white")
+    self.removeGhosting()
     self.draw(x,y,angle,"black")
     
   
