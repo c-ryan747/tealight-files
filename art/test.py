@@ -21,6 +21,7 @@ class track:
     
     middle.append(((3*screen_width)/4,screen_height/4))
     middle.append(((3*screen_width)/4,(3*screen_height)/4))
+    middle.append((screen_width/4,(3*screen_height)/4))
     #part = [(,
     #          ((3*screen_width/4),(3*screen_height/4)),
     #          (screen_width/4,(3*screen_height/4))]
