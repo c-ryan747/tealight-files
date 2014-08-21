@@ -1,21 +1,31 @@
 from tealight.art import color,box, polygon,fill_polygon,test_polygon, screen_width, screen_height
+from math import pi,sin,cos
 
 class track:
   "Some map disc"
   def __init__(self):
     self.polygons = []
     self.top = []
-    self.create_polygons()
-    self.draw_polygons()
     
     color("white")
     box(0,screen_height/10,screen_width,screen_height)
     
+    self.create_polygons()
+    self.draw_polygons()
+    
+    
   def create_polygons(self):
-    middle = [(screen_width/4,screen_height/4),
-              ((3*screen_width/4),screen_height/4),
-              ((3*screen_width/4),(3*screen_height/4)),
-              (screen_width/4,(3*screen_height/4))]
+    middle = []
+    
+    middle = self.circle_points(5, screen_width/8,(3*screen_width)/8,(3*screen_height)/8,1,middle)
+    
+    middle.append(((3*screen_width)/4,screen_height/4))
+    middle.append(((3*screen_width)/4,(3*screen_height)/4))
+    middle.append((screen_width/4,(3*screen_height)/4))
+    #part = [(,
+    #          ((3*screen_width/4),(3*screen_height/4)),
+    #          (screen_width/4,(3*screen_height/4))]
+    #middle.append(part)
     self.polygons.append(middle)
     
     self.top = [(0,0),
@@ -54,6 +64,7 @@ class track:
     
     color("blue")
     for i in self.polygons:
+      print(i)
       fill_polygon(i)
     
     color("red")
@@ -73,4 +84,14 @@ class track:
   
   def test_in_bottom_detector(self,x,y):
     return test_polygon(x,y,self.bottom_detector)
+  
+  def circle_points(self,amount, radius,cx,cy,corner,array):
+    angle = 0
+    for i in xrange(1,amount+2):
+      x = cx- (cos(angle)*radius) 
+      y = cy -(sin(angle)*radius)
+      array.append((x,y))
+      print("x:",str(x),"y:",str(y))
+      angle = angle + (pi/2)/amount
+    return array
   
