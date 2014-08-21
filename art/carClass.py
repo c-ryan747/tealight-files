@@ -36,6 +36,3 @@ class car:
     
   
 
-player1 = car(200,200,0)
-for i in range(1,10):
-  player1.move(200+i*10,200+i*10,i/2)
