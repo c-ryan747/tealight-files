@@ -4,6 +4,7 @@ class track:
   "Some map disc"
   def __init__(self):
     self.polygons = []
+    self.top = []
     self.create_polygons()
     self.draw_polygons()
     
@@ -60,11 +61,11 @@ class track:
     polygon(self.bottom_detector)
       
   def test_point(self,x,y):
+    if test_polygon(x,y,self.top):
+      return False
     for i in self.polygons:
       if test_polygon(x,y,i):
         return False
-    if test_polygon(x,y,self.top):
-      return False
     return True
   
   def test_in_top_detector(self,x,y):
