@@ -25,17 +25,17 @@ class track:
               (0,(9*screen_height)/10)]
     self.polygons.append(bottom)
     
-    left = [(screen_width,0),
+    right = [(screen_width,0),
             (screen_width,screen_height),
             ((9*screen_width/10),screen_height),
             ((9*screen_width/10),0)]
-    self.polygons.append(left)
+    self.polygons.append(right)
     
-    right = [(0,screen_height/10),
+    left = [(0,(screen_height/10)-3),
              (0,screen_height),
              (screen_width/10,screen_height),
-             (screen_width/10,screen_height/10)]
-    self.polygons.append(right)
+             (screen_width/10,(screen_height/10)-3)]
+    self.polygons.append(left)
     
     self.top_detector = [((screen_width*0.45),screen_height/10),
                          ((screen_width*0.45),screen_height/4),
