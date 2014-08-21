@@ -14,7 +14,7 @@ class car:
   def draw(self,x,y,angle,colour):
     angle = -angle
     
-    self.points = [x-car.size*sin(angle),
+    self.points = [x-self.size*sin(angle),
                    y-size*cos(angle),
                    x-size*sin(angle+(2*pi/3)),
                    y-size*cos(angle+(2*pi/3)),
