@@ -16,7 +16,7 @@ class car:
                    y-100*cos(angle+(2*pi/3)),
                    x-100*sin(angle+(4*pi/3)),
                    y-100*cos(angle+(4*pi/3))]
-    for i in range(0,2):
+    for i in range(0,3):
       line(self.points[0+2*i],self.points[1+2*i],self.points[2+2*i],self.points[3+2*i])
 
   
