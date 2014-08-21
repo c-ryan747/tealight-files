@@ -57,7 +57,7 @@ class car:
     self.draw(x,y,angle,"black")
     
   
-colour("white")
+color("white")
 box(0,0,screen_width,screen_height)
 
 asd = car(100,100,pi/7)
