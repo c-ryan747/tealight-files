@@ -7,19 +7,19 @@ from math import sin, cos, pi
   
 class car:
   "Race car class"
-  size = 100
   def __init__(self,x,y,angle):
     self.draw(x,y,angle,"black")
+    self.size = 100
     
   def draw(self,x,y,angle,colour):
     angle = -angle
     
-    self.points = [x-car.size*sin(angle),
-                   y-size*cos(angle),
-                   x-size*sin(angle+(2*pi/3)),
-                   y-size*cos(angle+(2*pi/3)),
-                   x-size*sin(angle+(4*pi/3)),
-                   y-size*cos(angle+(4*pi/3))]
+    self.points = [x-self.size*sin(angle),
+                   y-self.size*cos(angle),
+                   x-self.size*sin(angle+(2*pi/3)),
+                   y-self.size*cos(angle+(2*pi/3)),
+                   x-self.size*sin(angle+(4*pi/3)),
+                   y-self.size*cos(angle+(4*pi/3))]
     
     self.draw_points(self.points,colour)
   
