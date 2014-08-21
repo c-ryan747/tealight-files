@@ -7,7 +7,7 @@ from math import sin, cos, pi
 class car:
   "Race car class"
   def __init__(self, x, y, angle):
-    draw(x,y,angle)
+    self.draw(x,y,angle)
   def draw(x,y,angle):
     color(col)
     line(x-100*sin(angle),y-100*cos(angle),x-100*sin(angle+(2*pi/3)),y-100*cos(angle+(2*pi/3)))
