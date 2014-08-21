@@ -4,7 +4,6 @@ class track:
   "Some map disc"
   def __init__(self):
     self.polygons = []
-    self.detector = []
     self.create_polygons()
     self.draw_polygons()
     
@@ -39,10 +38,14 @@ class track:
              (screen_width/10,0)]
     self.polygons.append(right)
     
-    self.detector = [((screen_width*0.45),screen_height/10),
-                     ((screen_width*0.45),screen_height/4),
-                     ((screen_width*0.55),screen_height/4),
-                     ((screen_width*0.55),screen_height/10)]
+    self.top_detector = [((screen_width*0.45),screen_height/10),
+                         ((screen_width*0.45),screen_height/4),
+                         ((screen_width*0.55),screen_height/4),
+                         ((screen_width*0.55),screen_height/10)]
+    self.bottom_detector = [((screen_width*0.45),screen_height*0.9),
+                            ((screen_width*0.45),screen_height*0.75),
+                            ((screen_width*0.55),screen_height*0.75),
+                            ((screen_width*0.55),screen_height*0.9)]
     
   def draw_polygons(self):
     color("blue")
@@ -56,11 +59,11 @@ class track:
         return False
     return True
   
-  def test_in_detector(self,x,y):
+  def test_in_top_detector(self,x,y):
     return test_polygon(x,y,self.detector)
   
     
     
-#mainMap = track()
+mainMap = track()
 #print (mainMap.test_in_detector(screen_width*0.6,screen_width/9))
 #print (mainMap.test_point(100,100))
