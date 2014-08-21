@@ -21,11 +21,12 @@ left = [(screen_width,0),
 
 right = [(0,0),
        (0,screen_height),
-       ((9*screen_width)/10,screen_height),
-       ((9*screen_width)/10,0)]
+       (screen_width/10,screen_height),
+       (screen_width/10,0)]
 
 
 fill_polygon(middle)
 fill_polygon(top)
 fill_polygon(bottom)
+fill_polygon(right)
 fill_polygon(right)
