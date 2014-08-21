@@ -8,7 +8,7 @@ class car:
   "Race car class"
   def __init__(self):
     return
-  def draw(self,x,y,angle):
+  def draw(x,y,angle):
     
     self.points = [x-100*sin(angle),
                    y-100*cos(angle),
