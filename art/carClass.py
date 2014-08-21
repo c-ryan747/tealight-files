@@ -34,4 +34,4 @@ class car:
     self.draw(x,y,angle,"black")
     
   
-
+sad = car(200,200,0)
