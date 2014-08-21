@@ -1,42 +1,72 @@
-from tealight.art import (color, screen_width, screen_height, image, line, spot, circle, box, image, text, background)
-from tealight.utils import sleep
-from math import sin, cos, pi
+from tealight.art import color,box, polygon,fill_polygon,test_polygon, screen_width, screen_height
 
-#background ("track.png")
-
-  
-class car:
-  "Race car class"
-  
-  def __init__(self,x,y,angle):
-    self.draw(x,y,angle,"black")
+class track:
+  "Some map disc"
+  def __init__(self):
+    self.polygons = []
+    self.create_polygons()
+    self.draw_polygons()
     
-  def draw(self,x,y,angle,colour):
-    size = 40
-
-    self.points = [x+size*cos(angle),
-                   y-size*sin(angle),
-                   x+(size/2)*cos(angle+(2*pi/3)),
-                   y-(size/2)*sin(angle+(2*pi/3)),
-                   x+(size/2)*cos(angle+(4*pi/3)),
-                   y-(size/2)*sin(angle+(4*pi/3))]
+    color("white")
+    box(0,screen_height/10,screen_width,screen_height)
     
-    self.draw_points(self.points,colour)
-  
-  def draw_points(self,points,colour):
-    color(colour)
-    line(points[0],points[1],points[2],points[3])
-    line(points[2],points[3],points[4],points[5])
-    line(points[4],points[5],points[0],points[1])
-
-  def move(self,x,y,angle):
-    self.removeGhosting(self.points)
-    self.draw(x,y,angle,"black")
+  def create_polygons(self):
+    middle = [(screen_width/4,screen_height/4),
+              ((3*screen_width/4),screen_height/4),
+              ((3*screen_width/4),(3*screen_height/4)),
+              (screen_width/4,(3*screen_height/4))]
+    self.polygons.append(middle)
     
+
+    
+    bottom = [(0,screen_height),
+              (screen_width,screen_height),
+              (screen_width,(9*screen_height)/10),
+              (0,(9*screen_height)/10)]
+    self.polygons.append(bottom)
+    
+    left = [(screen_width,0),
+            (screen_width,screen_height),
+            ((9*screen_width/10),screen_height),
+            ((9*screen_width/10),0)]
+    self.polygons.append(left)
+    
+    right = [(0,screen_height/10),
+             (0,screen_height),
+             (screen_width/10,screen_height),
+             (screen_width/10,screen_height/10)]
+    self.polygons.append(right)
+    
+    self.top_detector = [((screen_width*0.45),screen_height/10),
+                         ((screen_width*0.45),screen_height/4),
+                         ((screen_width*0.55),screen_height/4),
+                         ((screen_width*0.55),screen_height/10)]
+    self.bottom_detector = [((screen_width*0.45),screen_height*0.9),
+                            ((screen_width*0.45),screen_height*0.75),
+                            ((screen_width*0.55),screen_height*0.75),
+                            ((screen_width*0.55),screen_height*0.9)]
+    
+  def draw_polygons(self):
+    
+    color("blue")
+    for i in self.polygons:
+      fill_polygon(i)
+    
+    color("red")
+    polygon(self.top_detector)
+    polygon(self.bottom_detector)
+      
+  def test_point(self,x,y):
+    for i in self.polygons:
+      if test_polygon(x,y,i):
+        return False
+    return True
   
-color("white")
-box(0,0,screen_width,screen_height)
-
-asd = car(100,100,pi/7)
-
-asd.move(150,150,0)
+  def test_in_top_detector(self,x,y):
+    return test_polygon(x,y,self.top_detector)
+  
+  def test_in_bottom_detector(self,x,y):
+    return test_polygon(x,y,self.bottom_detector)
+  
+  
+ma = track()
