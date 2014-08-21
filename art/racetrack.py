@@ -7,7 +7,7 @@ from math import sin, cos, pi
 class car:
   "Race car class"
   def __init__(self,x,y,angle):
-    self.draw(x,y,angle,colour)
+    self.draw(x,y,angle,"black")
     
   def draw(self,x,y,angle,colour):
     angle = -angle
