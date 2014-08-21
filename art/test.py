@@ -28,4 +28,4 @@ right = [(0,0),
 fill_polygon(middle)
 fill_polygon(top)
 fill_polygon(bottom)
-fill_polygon(left)
+fill_polygon(right)
