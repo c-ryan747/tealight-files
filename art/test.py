@@ -10,4 +10,5 @@ top = [(0,0),
        (screen_width,0)]
 
 
-fill_polygon(points)
+fill_polygon(middle)
+fill_polygon(top)
