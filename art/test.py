@@ -85,13 +85,14 @@ class track:
   def test_in_bottom_detector(self,x,y):
     return test_polygon(x,y,self.bottom_detector)
   
-  def circle_points(self,amount, radius,cx,cy,width,height):
+  def circle_points(self,amount, radius,x,y,width,height):
     angle = 0
+    amount = amount *4
     for i in xrange(1,amount+2):
-      x = cx- (cos(angle)*radius) 
-      y = cy -(sin(angle)*radius)
+      x = x + cos(angle)*radius
+      y = y + sin(angle)*radius
       array.append((x,y))
       print("x:",str(x),"y:",str(y))
-      angle = angle + (pi/2)/amount
+      angle = angle + (pi*2)/amount
     return array
   
