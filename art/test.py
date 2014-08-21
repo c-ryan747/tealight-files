@@ -85,7 +85,7 @@ class track:
   def test_in_bottom_detector(self,x,y):
     return test_polygon(x,y,self.bottom_detector)
   
-  def circle_points(self,amount, radius,cx,cy,corner,array):
+  def circle_points(self,amount, radius,cx,cy,width,height):
     angle = 0
     for i in xrange(1,amount+2):
       x = cx- (cos(angle)*radius) 
