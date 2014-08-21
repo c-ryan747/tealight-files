@@ -16,10 +16,12 @@ class car:
                    y-100*cos(angle+(2*pi/3)),
                    x-100*sin(angle+(4*pi/3)),
                    y-100*cos(angle+(4*pi/3))]
-    for i in range(0,3):
-      line(self.points[0+2*i],self.points[1+2*i],self.points[2+2*i],self.points[3+2*i])
+    
+    line(self.points[0],self.points[1],self.points[2],self.points[3])
+    line(self.points[2],self.points[3],self.points[4],self.points[5])
+    line(self.points[4],self.points[5],self.points[0],self.points[1])
 
   
 
-player1 = car()
-player1.draw(200,200,pi/2)
+
+car.draw(200,200,pi/2)
