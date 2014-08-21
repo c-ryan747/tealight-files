@@ -39,10 +39,10 @@ class track:
              (screen_width/10,0)]
     self.polygons.append(right)
     
-    self.detector = [(screen_width*0.45),screen_width/10),
-                     (screen_width*0.45),screen_width/5),
-                     (screen_width*0.55),screen_width/5),
-                     (screen_width*0.55),screen_width/10)]
+    self.detector = [((screen_width*0.45),screen_width/10),
+                     ((screen_width*0.45),screen_width/5),
+                     ((screen_width*0.55),screen_width/5),
+                     ((screen_width*0.55),screen_width/10)]
     
   def draw_polygons(self):
     color("blue")
