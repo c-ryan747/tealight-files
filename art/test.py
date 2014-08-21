@@ -4,6 +4,7 @@ class track:
   "Some map disc"
   def __init__(self):
     self.polygons = []
+    self.top = []
     self.create_polygons()
     self.draw_polygons()
     
@@ -17,7 +18,10 @@ class track:
               (screen_width/4,(3*screen_height/4))]
     self.polygons.append(middle)
     
-
+    self.top = [(0,0),
+           (0,screen_height/10),
+           (screen_width,screen_height/10),
+           (screen_width,0)]
     
     bottom = [(0,screen_height),
               (screen_width,screen_height),
@@ -25,17 +29,17 @@ class track:
               (0,(9*screen_height)/10)]
     self.polygons.append(bottom)
     
-    left = [(screen_width,0),
+    right = [(screen_width,0),
             (screen_width,screen_height),
             ((9*screen_width/10),screen_height),
             ((9*screen_width/10),0)]
-    self.polygons.append(left)
+    self.polygons.append(right)
     
-    right = [(0,screen_height/10),
+    left = [(0,(screen_height/10)-3),
              (0,screen_height),
              (screen_width/10,screen_height),
-             (screen_width/10,screen_height/10)]
-    self.polygons.append(right)
+             (screen_width/10,(screen_height/10)-3)]
+    self.polygons.append(left)
     
     self.top_detector = [((screen_width*0.45),screen_height/10),
                          ((screen_width*0.45),screen_height/4),
@@ -57,6 +61,8 @@ class track:
     polygon(self.bottom_detector)
       
   def test_point(self,x,y):
+    if test_polygon(x,y,self.top):
+      return False
     for i in self.polygons:
       if test_polygon(x,y,i):
         return False
@@ -67,6 +73,5 @@ class track:
   
   def test_in_bottom_detector(self,x,y):
     return test_polygon(x,y,self.bottom_detector)
-  
   
 ma = track()
