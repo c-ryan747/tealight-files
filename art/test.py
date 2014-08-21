@@ -7,7 +7,7 @@ class map:
     self.create_polygons()
     self.draw_polygons()
     
-  def create_polygons:
+  def create_polygons(self):
     middle = [(screen_width/4,screen_height/4),
               ((3*screen_width/4),screen_height/4),
               ((3*screen_width/4),(3*screen_height/4)),
@@ -38,7 +38,7 @@ class map:
              (screen_width/10,0)]
     self.polygons.append(right)
     
-  def draw_polygons:
+  def draw_polygons(self):
     color("blue")
     for i in self.polygons:
       fill_polygon(i)
