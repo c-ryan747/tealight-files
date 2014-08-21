@@ -1,1 +1,3 @@
-print "A new file!"
+from tealight.art import polygon
+
+p = polygon()
