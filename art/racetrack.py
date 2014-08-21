@@ -27,10 +27,6 @@ class car:
     line(points[0],points[1],points[2],points[3])
     line(points[2],points[3],points[4],points[5])
     line(points[4],points[5],points[0],points[1])
-    color("white")
-    line(points[0],points[1],points[2],points[3])
-    line(points[2],points[3],points[4],points[5])
-    line(points[4],points[5],points[0],points[1])
   
   def move(self,x,y,angle):
     self.draw_points(self.points,"white")
@@ -38,5 +34,5 @@ class car:
     
   
 
-player1 = car(200,200,0)
+#player1 = car(200,200,0)
 #player1.move(200,200,pi/2)
