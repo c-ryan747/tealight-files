@@ -17,7 +17,10 @@ class track:
               (screen_width/4,(3*screen_height/4))]
     self.polygons.append(middle)
     
-
+    self.top = [(0,0),
+           (0,screen_height/10),
+           (screen_width,screen_height/10),
+           (screen_width,0)]
     
     bottom = [(0,screen_height),
               (screen_width,screen_height),
@@ -60,6 +63,8 @@ class track:
     for i in self.polygons:
       if test_polygon(x,y,i):
         return False
+    if test_polygon(x,y,self.top):
+      return False
     return True
   
   def test_in_top_detector(self,x,y):
