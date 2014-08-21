@@ -59,4 +59,4 @@ class car:
   
 asd = car(100,100,0)
 
-car.move(150,150,0)
+asd.move(150,150,0)
