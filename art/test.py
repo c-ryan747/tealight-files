@@ -5,11 +5,13 @@ class track:
   def __init__(self):
     self.polygons = []
     self.top = []
-    self.create_polygons()
-    self.draw_polygons()
     
     color("white")
     box(0,screen_height/10,screen_width,screen_height)
+    
+    self.create_polygons()
+    self.draw_polygons()
+    
     
   def create_polygons(self):
     middle = [(screen_width/4,screen_height/4),
