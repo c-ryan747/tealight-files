@@ -16,10 +16,10 @@ class car:
 
     self.points = [x+size*cos(angle),
                    y-size*sin(angle),
-                   x+size*cos(angle+(2*pi/3)),
-                   y-size*sin(angle+(2*pi/3)),
-                   x+size*cos(angle+(4*pi/3)),
-                   y-size*sin(angle+(4*pi/3))]
+                   x+(size/2)*cos(angle+(2*pi/3)),
+                   y-(size/2)*sin(angle+(2*pi/3)),
+                   x+(size/2)*cos(angle+(4*pi/3)),
+                   y-(size/2)*sin(angle+(4*pi/3))]
     
     self.draw_points(self.points,colour)
   
