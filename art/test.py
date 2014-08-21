@@ -1,4 +1,4 @@
-from tealight.art import (color, image, line, spot, circle, box, image, text, background)
+from tealight.art import (color, screen_width, screen_height, image, line, spot, circle, box, image, text, background)
 from tealight.utils import sleep
 from math import sin, cos, pi
 
@@ -57,6 +57,7 @@ class car:
     self.draw(x,y,angle,"black")
     
   
+box(0,0,screen_width,screen_height)
 asd = car(100,100,pi/7)
 
 asd.move(150,150,0)
