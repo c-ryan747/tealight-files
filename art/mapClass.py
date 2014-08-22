@@ -62,7 +62,6 @@ class track:
     polygon(self.bottom_detector)
     color("blue")
     for i in self.polygons:
-      print(i)
       fill_polygon(i)
     
  
