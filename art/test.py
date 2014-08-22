@@ -17,18 +17,15 @@ class track:
   def create_polygons(self):
     middle = []
     
-    #middle = self.circle_points(5, screen_width/8,(3*screen_width)/8,(3*screen_height)/8,1,middle)
+    middle = self.circle_points(5, screen_width/8,(3*screen_width)/8,(3*screen_height)/8,1,middle)
     
-    #middle.append(((3*screen_width)/4,screen_height/4))
-    #middle.append(((3*screen_width)/4,(3*screen_height)/4))
-    #middle.append((screen_width/4,(3*screen_height)/4))
+    middle.append(((3*screen_width)/4,screen_height/4))
+    middle.append(((3*screen_width)/4,(3*screen_height)/4))
+    middle.append((screen_width/4,(3*screen_height)/4))
     #part = [(,
     #          ((3*screen_width/4),(3*screen_height/4)),
     #          (screen_width/4,(3*screen_height/4))]
     #middle.append(part)
-
-    middle = self.circle_points(4, screen_width/8,screen_width/4,screen_height/4,screen_width/2,screen_height/2)
-
     self.polygons.append(middle)
     
     self.top = [(0,0),
@@ -88,25 +85,14 @@ class track:
   def test_in_bottom_detector(self,x,y):
     return test_polygon(x,y,self.bottom_detector)
   
-  def circle_points(self,amount, radius,x,y,width,height):
+  def circle_points(self,amount, radius,cx,cy,corner,array):
     angle = 0
-    amount = amount*4
-    array = []
-    for i in xrange(0,amount):
-      x = x + radius - cos(angle)*radius
-      y = y + radius - sin(angle)*radius
-
-      if i>= (3*amount)/4:
-        y = y + width
-      elif i>=amount/2:
-        x = x + width
-        y = y + height
-      elif i>=amount/4:
-        x = x + width
-
+    for i in xrange(1,amount+2):
+      x = cx- (cos(angle)*radius) 
+      y = cy -(sin(angle)*radius)
       array.append((x,y))
       print("x:",str(x),"y:",str(y))
-      angle = angle + (pi*2)/amount
+      angle = angle + (pi/2)/amount
     return array
   
 ma = track()
