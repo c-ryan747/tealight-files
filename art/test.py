@@ -22,7 +22,7 @@ class track:
     middle = self.circle_points_b(5, screen_width/8,(5*screen_width)/8,(5*screen_height)/8,1,middle)
     
     #middle.append(((3*screen_width)/4,screen_height/4))
-    middle.append(((3*screen_width)/4,(3*screen_height)/4))
+    #middle.append(((3*screen_width)/4,(3*screen_height)/4))
     middle.append((screen_width/4,(3*screen_height)/4))
     #part = [(,
     #          ((3*screen_width/4),(3*screen_height/4)),
