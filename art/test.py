@@ -96,3 +96,4 @@ class track:
     return array
   
 ma = track()
+print(str(screen_width))
