@@ -55,8 +55,8 @@ class track:
     self.polygons.append(left)
     
     self.top_detector = [((screen_width*0.45),screen_height/10),
-                         ((screen_width*0.45),screen_height/4),
-                         ((screen_width*0.55),screen_height/4),
+                         ((screen_width*0.45),screen_height/3),
+                         ((screen_width*0.55),screen_height/3),
                          ((screen_width*0.55),screen_height/10)]
     self.bottom_detector = [((screen_width*0.45),screen_height*0.9),
                             ((screen_width*0.45),screen_height*0.75),
