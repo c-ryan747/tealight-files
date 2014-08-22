@@ -108,8 +108,8 @@ class track:
   def circle_points_c(self,amount, radius,cx,cy,corner,array):
     angle = 0
     for i in xrange(1,amount+2):
-      x = cx+(sin(angle)*radius) 
-      y = cy+(cos(angle)*radius)
+      x = cx+(cos(angle)*radius) 
+      y = cy+(sin(angle)*radius)
       array.append((x,y))
       #print("x:",str(x),"y:",str(y))
       angle = angle + (pi/2)/amount
