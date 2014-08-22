@@ -1,8 +1,6 @@
 from tealight.art import (screen_width, color, image, line, spot, circle, box, image, text, background)
-from tealight.utils import sleep
 from math import sin, cos, pi
 
-#background ("track.png")
 hue = 0
   
 class car:
@@ -10,6 +8,7 @@ class car:
   
   def __init__(self,x,y,angle):
     self.draw(x,y,angle)
+    
     
   def draw(self,x,y,angle):
     size = 40
@@ -24,6 +23,7 @@ class car:
     
     self.draw_points(self.points)
   
+  
   def draw_points(self,points):
     global hue
     color("hsl(%d,100%%,50%%)" % hue)
@@ -37,4 +37,3 @@ class car:
     #self.draw_points(self.points,"white")
     self.draw(x,y,angle)
     
-print("NEWDADASDSADDAD")
