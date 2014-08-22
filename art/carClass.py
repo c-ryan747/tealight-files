@@ -26,7 +26,7 @@ class car:
   
   def draw_points(self,points,colour):
     #color(colour)
-    color("hsl(%d,100%%,50%%)" % hue)
+    color("hsl(%d,100%%,50%%)" % self.hue)
     self.hue = self.hue + 1
     line(points[0],points[1],points[2],points[3])
     line(points[2],points[3],points[4],points[5])
