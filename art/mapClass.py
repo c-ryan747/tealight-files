@@ -35,10 +35,10 @@ class track:
               (0,(9*screen_height)/10)]
     self.polygons.append(bottom)
     
-    right = [(screen_width,screen_width/10),
+    right = [(screen_width,screen_height/10),
              (screen_width,screen_height),
              ((9*screen_width/10),screen_height),
-             ((9*screen_width/10),screen_width/10)]
+             ((9*screen_width/10),screen_height/10)]
     self.polygons.append(right)
     
     left = [(0,(screen_height/10)-3),
