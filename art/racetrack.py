@@ -68,10 +68,10 @@ class track:
     
     middle = []
     sides = 10
-    middle = self.circle_points_a(sides, screen_width/8,(3*screen_width)/8,(3*screen_height)/8,middle)
-    #middle = self.circle_points_b(sides, screen_width/8,(5*screen_width)/8,(3*screen_height)/8,middle)
-    #middle = self.circle_points_c(sides, screen_width/8,(5*screen_width)/8,(5*screen_height)/8,middle)
-    #middle = self.circle_points_d(sides, screen_width/8,(3*screen_width)/8,(5*screen_height)/8,middle)
+    middle = self.circle_points(sides, screen_width/8,(3*screen_width)/8,(3*screen_height)/8,middle,0)
+    middle = self.circle_points(sides, screen_width/8,(5*screen_width)/8,(3*screen_height)/8,middle,pi/2)
+    middle = self.circle_points(sides, screen_width/8,(5*screen_width)/8,(5*screen_height)/8,middle,pi)
+    middle = self.circle_points(sides, screen_width/8,(3*screen_width)/8,(5*screen_height)/8,middle,(3*pi)/2)
     self.polygons.append(middle)
     
     self.top = [(0,0),
@@ -134,17 +134,14 @@ class track:
   
   #Really this should be only 1 function but its 4 due to time
   #each one draws part of a circle at an offset 
-  def circle_points_a(self,amount,radius,cx,cy,array):
-    angle = 0
-    offset = pi/2
-    for j in xrange(0,4):
-      angle = offset * j
-      for i in xrange(1,amount+2):
-        x = cx- (cos(angle)*radius) 
-        y = cy-(sin(angle)*radius)
-        array.append((x,y))
-        #print("x:",str(x),"y:",str(y))
-        angle = angle + (pi/2)/amount
+  def circle_points(self,amount,radius,cx,cy,array, offset):
+    angle = offset
+    for i in xrange(1,amount+2):
+      x = cx- (cos(angle)*radius) 
+      y = cy-(sin(angle)*radius)
+      array.append((x,y))
+      #print("x:",str(x),"y:",str(y))
+      angle = angle + (pi/2)/amount
     return array
   
   
