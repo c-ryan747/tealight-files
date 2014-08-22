@@ -96,12 +96,12 @@ class track:
       x = x + cos(angle)*radius - radius
       y = y + sin(angle)*radius - radius
 
-      if i<= (3*amount)/4:
+      if i>= (3*amount)/4:
         y = y + width
-      elif i<=amount/2:
+      elif i>=amount/2:
         x = x + width
         y = y + height
-      elif i<=amount/4:
+      elif i>=amount/4:
         x = x + width
 
       array.append((x,y))
