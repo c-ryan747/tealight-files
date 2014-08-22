@@ -125,3 +125,4 @@ class track:
       angle = angle + (pi/2)/amount
     return array 
   
+ma = track()
