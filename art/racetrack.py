@@ -145,7 +145,7 @@ class track:
         array.append((x,y))
         #print("x:",str(x),"y:",str(y))
         angle = angle + (pi/2)/amount
-      return array
+    return array
   
   
   def circle_points_b(self,amount,radius,cx,cy,array):
