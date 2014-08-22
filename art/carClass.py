@@ -33,4 +33,3 @@ class car:
     line(points[4],points[5],points[0],points[1])
     
   
-    
