@@ -91,7 +91,7 @@ class track:
       x = cx- (cos(angle)*radius) 
       y = cy -(sin(angle)*radius)
       array.append((x,y))
-      #print("x:",str(x),"y:",str(y))
+      print("x:",str(x),"y:",str(y))
       angle = angle + (pi/2)/amount
     return array
   
