@@ -90,7 +90,7 @@ class track:
   
   def circle_points(self,amount, radius,x,y,width,height):
     angle = 0
-    amount = amount *4
+    amount = amount*4
     array = []
     for i in xrange(0,amount):
       x = x + cos(angle)*radius - radius
