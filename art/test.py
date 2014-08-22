@@ -64,15 +64,15 @@ class track:
                             ((screen_width*0.55),screen_height*0.9)]
     
   def draw_polygons(self):
-    
+    color("red")
+    polygon(self.top_detector)
+    polygon(self.bottom_detector)
     color("blue")
     for i in self.polygons:
       print(i)
       fill_polygon(i)
     
-    color("red")
-    polygon(self.top_detector)
-    polygon(self.bottom_detector)
+
       
   def test_point(self,x,y):
     if test_polygon(x,y,self.top):
