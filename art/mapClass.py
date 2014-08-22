@@ -2,7 +2,7 @@ from tealight.art import color,box, polygon,fill_polygon,test_polygon, screen_wi
 from math import pi,sin,cos
 
 class track:
-  "Some map disc"
+  "Some map desc"
   def __init__(self):
     self.polygons = []
     self.top = []
