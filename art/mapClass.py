@@ -18,10 +18,10 @@ class track:
     
     middle = []
     sides = 10
-    middle = self.circle_points_a(sides, screen_width/8,(3*screen_width)/8,(3*screen_height)/8,1,middle)
-    middle = self.circle_points_b(sides, screen_width/8,(5*screen_width)/8,(3*screen_height)/8,1,middle)
-    middle = self.circle_points_c(sides, screen_width/8,(5*screen_width)/8,(5*screen_height)/8,1,middle)
-    middle = self.circle_points_d(sides, screen_width/8,(3*screen_width)/8,(5*screen_height)/8,1,middle)
+    middle = self.circle_points_a(sides, screen_width/8,(3*screen_width)/8,(3*screen_height)/8,middle)
+    middle = self.circle_points_b(sides, screen_width/8,(5*screen_width)/8,(3*screen_height)/8,middle)
+    middle = self.circle_points_c(sides, screen_width/8,(5*screen_width)/8,(5*screen_height)/8,middle)
+    middle = self.circle_points_d(sides, screen_width/8,(3*screen_width)/8,(5*screen_height)/8,middle)
     self.polygons.append(middle)
     
     self.top = [(0,0),
@@ -83,7 +83,9 @@ class track:
     return test_polygon(x,y,self.bottom_detector)
   
   
-  def circle_points_a(self,amount, radius,cx,cy,corner,array):
+  #Really this should be only 1 function but its 4 due to time
+  #each one draws part of a circle at an offset 
+  def circle_points_a(self,amount,radius,cx,cy,array):
     angle = 0
     for i in xrange(1,amount+2):
       x = cx- (cos(angle)*radius) 
@@ -94,7 +96,7 @@ class track:
     return array
   
   
-  def circle_points_b(self,amount, radius,cx,cy,corner,array):
+  def circle_points_b(self,amount,radius,cx,cy,array):
     angle = 0
     for i in xrange(1,amount+2):
       x = cx+(sin(angle)*radius) 
@@ -105,7 +107,7 @@ class track:
     return array 
   
   
-  def circle_points_c(self,amount, radius,cx,cy,corner,array):
+  def circle_points_c(self,amount,radius,cx,cy,array):
     angle = 0
     for i in xrange(1,amount+2):
       x = cx+(cos(angle)*radius) 
@@ -116,7 +118,7 @@ class track:
     return array
   
   
-  def circle_points_d(self,amount, radius,cx,cy,corner,array):
+  def circle_points_d(self,amount,radius,cx,cy,,array):
     angle = 0
     for i in xrange(1,amount+2):
       x = cx-(sin(angle)*radius) 
