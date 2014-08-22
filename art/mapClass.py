@@ -17,11 +17,14 @@ class track:
   def create_polygons(self):
     middle = []
     
-    middle = self.circle_points(5, screen_width/8,(3*screen_width)/8,(3*screen_height)/8,1,middle)
+    middle = self.circle_points_a(5, screen_width/8,(3*screen_width)/8,(3*screen_height)/8,1,middle)
+    middle = self.circle_points_b(5, screen_width/8,(5*screen_width)/8,(3*screen_height)/8,1,middle)
+    middle = self.circle_points_c(5, screen_width/8,(5*screen_width)/8,(5*screen_height)/8,1,middle)
+    middle = self.circle_points_d(5, screen_width/8,(3*screen_width)/8,(5*screen_height)/8,1,middle)
     
-    middle.append(((3*screen_width)/4,screen_height/4))
-    middle.append(((3*screen_width)/4,(3*screen_height)/4))
-    middle.append((screen_width/4,(3*screen_height)/4))
+    #middle.append(((3*screen_width)/4,screen_height/4))
+    #middle.append(((3*screen_width)/4,(3*screen_height)/4))
+    #middle.append((screen_width/4,(3*screen_height)/4))
     #part = [(,
     #          ((3*screen_width/4),(3*screen_height/4)),
     #          (screen_width/4,(3*screen_height/4))]
@@ -52,24 +55,24 @@ class track:
     self.polygons.append(left)
     
     self.top_detector = [((screen_width*0.45),screen_height/10),
-                         ((screen_width*0.45),screen_height/4),
-                         ((screen_width*0.55),screen_height/4),
+                         ((screen_width*0.45),screen_height/3),
+                         ((screen_width*0.55),screen_height/3),
                          ((screen_width*0.55),screen_height/10)]
     self.bottom_detector = [((screen_width*0.45),screen_height*0.9),
-                            ((screen_width*0.45),screen_height*0.75),
-                            ((screen_width*0.55),screen_height*0.75),
+                            ((screen_width*0.45),screen_height*0.66),
+                            ((screen_width*0.55),screen_height*0.66),
                             ((screen_width*0.55),screen_height*0.9)]
     
   def draw_polygons(self):
-    
+    color("red")
+    polygon(self.top_detector)
+    polygon(self.bottom_detector)
     color("blue")
     for i in self.polygons:
       print(i)
       fill_polygon(i)
     
-    color("red")
-    polygon(self.top_detector)
-    polygon(self.bottom_detector)
+
       
   def test_point(self,x,y):
     if test_polygon(x,y,self.top):
@@ -85,13 +88,40 @@ class track:
   def test_in_bottom_detector(self,x,y):
     return test_polygon(x,y,self.bottom_detector)
   
-  def circle_points(self,amount, radius,cx,cy,corner,array):
+  def circle_points_a(self,amount, radius,cx,cy,corner,array):
     angle = 0
     for i in xrange(1,amount+2):
       x = cx- (cos(angle)*radius) 
-      y = cy -(sin(angle)*radius)
+      y = cy-(sin(angle)*radius)
       array.append((x,y))
       #print("x:",str(x),"y:",str(y))
       angle = angle + (pi/2)/amount
     return array
+  def circle_points_b(self,amount, radius,cx,cy,corner,array):
+    angle = 0
+    for i in xrange(1,amount+2):
+      x = cx+(sin(angle)*radius) 
+      y = cy-(cos(angle)*radius)
+      array.append((x,y))
+      #print("x:",str(x),"y:",str(y))
+      angle = angle + (pi/2)/amount
+    return array 
+  def circle_points_c(self,amount, radius,cx,cy,corner,array):
+    angle = 0
+    for i in xrange(1,amount+2):
+      x = cx+(cos(angle)*radius) 
+      y = cy+(sin(angle)*radius)
+      array.append((x,y))
+      #print("x:",str(x),"y:",str(y))
+      angle = angle + (pi/2)/amount
+    return array
+  def circle_points_d(self,amount, radius,cx,cy,corner,array):
+    angle = 0
+    for i in xrange(1,amount+2):
+      x = cx-(sin(angle)*radius) 
+      y = cy+(cos(angle)*radius)
+      array.append((x,y))
+      #print("x:",str(x),"y:",str(y))
+      angle = angle + (pi/2)/amount
+    return array 
   
