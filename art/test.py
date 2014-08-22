@@ -16,11 +16,11 @@ class track:
     
   def create_polygons(self):
     middle = []
-    
-    middle = self.circle_points_a(5, screen_width/8,(3*screen_width)/8,(3*screen_height)/8,1,middle)
-    middle = self.circle_points_b(5, screen_width/8,(5*screen_width)/8,(3*screen_height)/8,1,middle)
-    middle = self.circle_points_c(5, screen_width/8,(5*screen_width)/8,(5*screen_height)/8,1,middle)
-    middle = self.circle_points_d(5, screen_width/8,(3*screen_width)/8,(5*screen_height)/8,1,middle)
+    sides = 5
+    middle = self.circle_points_a(sides, screen_width/8,(3*screen_width)/8,(3*screen_height)/8,1,middle)
+    middle = self.circle_points_b(sides, screen_width/8,(5*screen_width)/8,(3*screen_height)/8,1,middle)
+    middle = self.circle_points_c(sides, screen_width/8,(5*screen_width)/8,(5*screen_height)/8,1,middle)
+    middle = self.circle_points_d(sides, screen_width/8,(3*screen_width)/8,(5*screen_height)/8,1,middle)
     
     #middle.append(((3*screen_width)/4,screen_height/4))
     #middle.append(((3*screen_width)/4,(3*screen_height)/4))
