@@ -1,4 +1,4 @@
-from tealight.art import (color, image, line, spot, circle, box, image, text, background)
+from tealight.art import (screen_width, color, image, line, spot, circle, box, image, text, background)
 from tealight.utils import sleep
 from math import sin, cos, pi
 
@@ -12,7 +12,7 @@ class car:
     self.draw(x,y,angle,"black")
     
   def draw(self,x,y,angle,colour):
-    size = 40
+    size = screen_width/12
 
     self.points = [x+size*cos(angle),
                    y-size*sin(angle),
