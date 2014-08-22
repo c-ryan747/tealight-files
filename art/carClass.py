@@ -3,14 +3,13 @@ from tealight.utils import sleep
 from math import sin, cos, pi
 
 #background ("track.png")
-
+hue = 0
   
 class car:
   "Race car class"
   
   def __init__(self,x,y,angle):
     self.draw(x,y,angle,"black")
-    self.hue = 0
     
   def draw(self,x,y,angle,colour):
     size = 40
@@ -25,9 +24,10 @@ class car:
     self.draw_points(self.points,colour)
   
   def draw_points(self,points,colour):
+    global hue
     #color(colour)
-    color("hsl(%d,100%%,50%%)" % self.hue)
-    self.hue = self.hue + 1
+    color("hsl(%d,100%%,50%%)" % hue)
+    hue = hue + 1
     line(points[0],points[1],points[2],points[3])
     line(points[2],points[3],points[4],points[5])
     line(points[4],points[5],points[0],points[1])
