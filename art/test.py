@@ -20,10 +20,11 @@ class track:
     middle = self.circle_points_a(5, screen_width/8,(3*screen_width)/8,(3*screen_height)/8,1,middle)
     middle = self.circle_points_b(5, screen_width/8,(5*screen_width)/8,(3*screen_height)/8,1,middle)
     middle = self.circle_points_c(5, screen_width/8,(5*screen_width)/8,(5*screen_height)/8,1,middle)
+    middle = self.circle_points_d(5, screen_width/8,(3*screen_width)/8,(5*screen_height)/8,1,middle)
     
     #middle.append(((3*screen_width)/4,screen_height/4))
     #middle.append(((3*screen_width)/4,(3*screen_height)/4))
-    middle.append((screen_width/4,(3*screen_height)/4))
+    #middle.append((screen_width/4,(3*screen_height)/4))
     #part = [(,
     #          ((3*screen_width/4),(3*screen_height/4)),
     #          (screen_width/4,(3*screen_height/4))]
@@ -106,6 +107,15 @@ class track:
       angle = angle + (pi/2)/amount
     return array 
   def circle_points_c(self,amount, radius,cx,cy,corner,array):
+    angle = 0
+    for i in xrange(1,amount+2):
+      x = cx+(cos(angle)*radius) 
+      y = cy+(sin(angle)*radius)
+      array.append((x,y))
+      #print("x:",str(x),"y:",str(y))
+      angle = angle + (pi/2)/amount
+    return array
+  def circle_points_d(self,amount, radius,cx,cy,corner,array):
     angle = 0
     for i in xrange(1,amount+2):
       x = cx+(cos(angle)*radius) 
