@@ -93,8 +93,8 @@ class track:
     amount = amount*4
     array = []
     for i in xrange(0,amount):
-      x = x + cos(angle)*radius - radius
-      y = y + sin(angle)*radius - radius
+      x = x + radius - cos(angle)*radius
+      y = y + radius - sin(angle)*radius
 
       if i>= (3*amount)/4:
         y = y + width
