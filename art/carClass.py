@@ -12,7 +12,7 @@ class car:
     self.draw(x,y,angle,"black")
     
   def draw(self,x,y,angle,colour):
-    size = screen_width/100
+    size = screen_width/70
 
     self.points = [x+size*cos(angle),
                    y-size*sin(angle),
