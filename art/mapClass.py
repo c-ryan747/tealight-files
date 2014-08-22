@@ -118,7 +118,7 @@ class track:
     return array
   
   
-  def circle_points_d(self,amount,radius,cx,cy,,array):
+  def circle_points_d(self,amount,radius,cx,cy,array):
     angle = 0
     for i in xrange(1,amount+2):
       x = cx-(sin(angle)*radius) 
