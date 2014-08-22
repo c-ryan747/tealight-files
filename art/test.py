@@ -16,7 +16,7 @@ class track:
     
   def create_polygons(self):
     middle = []
-    sides = 5
+    sides = 10
     middle = self.circle_points_a(sides, screen_width/8,(3*screen_width)/8,(3*screen_height)/8,1,middle)
     middle = self.circle_points_b(sides, screen_width/8,(5*screen_width)/8,(3*screen_height)/8,1,middle)
     middle = self.circle_points_c(sides, screen_width/8,(5*screen_width)/8,(5*screen_height)/8,1,middle)
