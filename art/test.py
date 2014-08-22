@@ -59,8 +59,8 @@ class track:
                          ((screen_width*0.55),screen_height/3),
                          ((screen_width*0.55),screen_height/10)]
     self.bottom_detector = [((screen_width*0.45),screen_height*0.9),
-                            ((screen_width*0.45),screen_height*0.75),
-                            ((screen_width*0.55),screen_height*0.75),
+                            ((screen_width*0.45),screen_height*0.66),
+                            ((screen_width*0.55),screen_height*0.66),
                             ((screen_width*0.55),screen_height*0.9)]
     
   def draw_polygons(self):
