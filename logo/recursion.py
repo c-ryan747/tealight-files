@@ -1,6 +1,6 @@
 from tealight.logo import move, turn
 
-size = 4
+size = 6
 
 def zig(n):
   if n == 1:
