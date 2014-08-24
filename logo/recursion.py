@@ -27,4 +27,4 @@ def zag(n):
     zag(n/2)
     
 zig(8)
-#zig(3)
+zig(3)
