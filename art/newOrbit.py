@@ -56,9 +56,13 @@ def handle_frame():
   vx = vx + ax
   
   vy = vy + ay
+ 
+  apply_friction()
+  apply_gravity()
   
   x = x + vx
   y = y + vy
+ 
   
   color("blue")
   
