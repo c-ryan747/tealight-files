@@ -20,6 +20,7 @@ def handle_keydown(key):
   if key == "left":
     for i in xrange(0,len(ax)):
       ax[i] = -power
+      print("hi")
   elif key == "right":
     for i in xrange(0,len(ax)):
       ax[i] = power
