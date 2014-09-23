@@ -20,7 +20,6 @@ def handle_keydown(key):
   if key == "left":
     for i in xrange(0,len(ax)):
       ax[i] = -power
-      print(ax)
   elif key == "right":
     for i in xrange(0,len(ax)):
       ax[i] = power
@@ -58,7 +57,7 @@ def apply_friction(v):
   global friction
   if v > friction:
     v = v - friction
-  elif vx < -friction:
+  elif v < -friction:
     v = v + friction
   else:
     v = 0
@@ -75,9 +74,7 @@ def handle_frame():
   
     vy[i] = vy[i] + ay[i]
    
-    print(vx[i])
     vx[i] = apply_friction(vx[i])
-    print(vx[i])
     vy[i] = apply_gravity(vy[i])
   
     x[i] = x[i] + vx[i]
