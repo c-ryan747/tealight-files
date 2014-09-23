@@ -4,10 +4,10 @@ from tealight.art import screen_width, screen_height
 
 x = [screen_width / 2, screen_width / 3]
 y = [screen_height / 2, screen_height / 3]
-vx = [0,0]
-vy = [0,0]
-ax = [0,0]
-ay = [0,0]
+vx = [0.0,0.0]
+vy = [0.0,0.0]
+ax = [0.0,0.0]
+ay = [0.0,0.0]
 friction = 0.1
 gravity = 0.15
 
@@ -28,10 +28,10 @@ def handle_keydown(key):
   elif key == "a":
     x.append(screen_width / 2)
     y.append(screen_height / 2)
-    vx.append(0)
-    vy.append(0)
-    ax.append(0)
-    ay.append(0)
+    vx.append(0.0)
+    vy.append(0.0)
+    ax.append(0.0)
+    ay.append(0.0)
     
 
 def handle_keyup(key):
