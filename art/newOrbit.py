@@ -9,6 +9,7 @@ vy = 0
 ax = 0
 ay = 0
 friction = 0.1
+gravity = 0.15
 
 power = 0.3
 
@@ -40,14 +41,15 @@ def handle_frame():
   
   spot(x,y,8)
   vx = vx + ax
+  
   if vx > friction:
     vx = vx - friction
   elif vx < -friction:
     vx = vx + friction
   else:
     vx = 0
-  print(vx)
-  vy = vy + ay
+  
+  vy = vy + ay - gravity 
   
   x = x + vx
   y = y + vy
