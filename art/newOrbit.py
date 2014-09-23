@@ -34,22 +34,28 @@ def handle_keyup(key):
   elif key == "up" or key == "down":
     ay = 0
     
-def handle_frame():
-  global x,y,vx,vy,ax,ay
-  
-  color("white")
-  
-  spot(x,y,8)
-  vx = vx + ax
-  
+def apply_gravity():
+  global x,y,vx,vy,ax,ay,friction
+  vy = vy +  + gravity
+
+def apply_friction():
+  global x,y,vx,vy,ax,ay,friction
   if vx > friction:
     vx = vx - friction
   elif vx < -friction:
     vx = vx + friction
   else:
     vx = 0
+    
+def handle_frame():
+  global x,y,vx,vy,ax,ay,friction
   
-  vy = vy + ay + gravity 
+  color("white")
+  
+  spot(x,y,8)
+  vx = vx + ax
+  
+  vy = vy + ay
   
   x = x + vx
   y = y + vy
