@@ -2,12 +2,12 @@ from tealight.art import (color, line, spot, circle, box, image, text, backgroun
 
 from tealight.art import screen_width, screen_height
 
-x = [screen_width / 2]
-y = [screen_height / 2]
-vx = [0]
-vy = [0]
-ax = [0]
-ay = [0]
+x = [screen_width / 2, screen_width / 3]
+y = [screen_height / 2, screen_height / 3]
+vx = [0,0]
+vy = [0,0]
+ax = [0,0]
+ay = [0,0]
 friction = 0.1
 gravity = 0.15
 
