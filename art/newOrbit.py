@@ -49,7 +49,7 @@ def handle_frame():
   else:
     vx = 0
   
-  vy = vy + ay - gravity 
+  vy = vy + ay + gravity 
   
   x = x + vx
   y = y + vy
