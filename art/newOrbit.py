@@ -40,12 +40,13 @@ def handle_frame():
   
   spot(x,y,8)
   vx = vx + ax
-  if vx > 0.1:
+  if vx > friction:
     vx = vx - friction
-  elif vx < -0.1:
+  elif vx < -friction:
     vx = vx + friction
   else:
     vx = 0
+  print(vx)
   vy = vy + ay
   
   x = x + vx
