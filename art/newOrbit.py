@@ -32,10 +32,10 @@ def handle_keydown(key):
   elif key == "a":
     x.append(screen_width / 2)
     y.append(screen_height / 2)
-    vx.append(0.0)
-    vy.append(0.0)
-    ax.append(0.0)
-    ay.append(0.0)
+    vx.append(vx[0])
+    vy.append(vy[0])
+    ax.append(ax[0])
+    ay.append(ay[0])
     
 
 def handle_keyup(key):
