@@ -66,6 +66,7 @@ def handle_frame():
     spot(x[i],y[i],8)
     vx[i] = vx[i] + ax[i]
   
+    print(i)
     vy[i] = vy[i] + ay[i]
  
     vx[i] = apply_friction(vx[i])
