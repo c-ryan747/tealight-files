@@ -2,12 +2,12 @@ from tealight.art import (color, line, spot, circle, box, image, text, backgroun
 
 from tealight.art import screen_width, screen_height
 
-x = screen_width / 2
-y = screen_height / 2
-vx = 0
-vy = 0
-ax = 0
-ay = 0
+x = [screen_width / 2]
+y = [screen_height / 2]
+vx = [0]
+vy = [0]
+ax = [0]
+ay = [0]
 friction = 0.1
 gravity = 0.15
 
@@ -25,6 +25,14 @@ def handle_keydown(key):
     ay = -power
   elif key == "down":
     ay = power
+  elif key == "a":
+    x.append(screen_width / 2)
+    y.append(screen_height / 2)
+    vx.append(0)
+    vy.append(0)
+    ax.append(0)
+    ay.append(0)
+    
 
 def handle_keyup(key):
   global ax, ay
@@ -34,38 +42,41 @@ def handle_keyup(key):
   elif key == "up" or key == "down":
     ay = 0
     
-def apply_gravity():
-  global x,y,vx,vy,ax,ay,friction
-  vy = vy +  + gravity
+def apply_gravity(v):
+  global gravity
+  v = v + gravity
+  return v
 
-def apply_friction():
-  global x,y,vx,vy,ax,ay,friction
-  if vx > friction:
-    vx = vx - friction
+def apply_friction(v):
+  global friction
+  if v > friction:
+    v = v - friction
   elif vx < -friction:
-    vx = vx + friction
+    v = v + friction
   else:
-    vx = 0
+    v = 0
+  return v
     
 def handle_frame():
-  global x,y,vx,vy,ax,ay,friction
+  global x,y,vx,vy,ax,ay
   
-  color("white")
+  for i in xrange(0,len(x)):  
+    color("white")
   
-  spot(x,y,8)
-  vx = vx + ax
+    spot(x[i],y[i],8)
+    vx[i] = vx[i] + ax[i]
   
-  vy = vy + ay
+    vy[i] = vy[i] + ay[i]
  
-  apply_friction()
-  apply_gravity()
+    vx[i] = apply_friction(vx[i])
+    vy[i] = apply_gravity(vy[i])
   
-  x = x + vx
-  y = y + vy
+    x[i] = x[i] + vx[i]
+    y[i] = y[i] + vy[i]
  
   
-  color("blue")
+    color("blue")
   
-  spot(x,y,8)
+    spot(x[i],y[i],8)
   
   
