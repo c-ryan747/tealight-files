@@ -2,12 +2,12 @@ from tealight.art import (color, line, spot, circle, box, image, text, backgroun
 
 from tealight.art import screen_width, screen_height
 
-x = [screen_width / 2, screen_width / 3]
-y = [screen_height / 2, screen_height / 3]
-vx = [0.0,0.0]
-vy = [0.0,0.0]
-ax = [0.0,0.0]
-ay = [0.0,0.0]
+x = [screen_width / 2]
+y = [screen_height / 2]
+vx = [0.0]
+vy = [0.0]
+ax = [0.0]
+ay = [0.0]
 friction = 0.1
 gravity = 0.15
 
@@ -18,13 +18,17 @@ def handle_keydown(key):
   
 
   if key == "left":
-    ax = -power
+    for i in xrange(0,len(ax)):
+      ax[i] = -power
   elif key == "right":
-    ax = power
+    for i in xrange(0,len(ax)):
+      ax[i] = power
   elif key == "up":
-    ay = -power
+    for i in xrange(0,len(ay)):
+      ay[i] = -power
   elif key == "down":
-    ay = power
+    for i in xrange(0,len(ay)):
+      ay[i] = power
   elif key == "a":
     x.append(screen_width / 2)
     y.append(screen_height / 2)
@@ -38,9 +42,11 @@ def handle_keyup(key):
   global ax, ay
 
   if key == "left" or key == "right":
-    ax = 0
+    for i in xrange(0,len(ax)):
+      ax[i] = 0
   elif key == "up" or key == "down":
-    ay = 0
+    for i in xrange(0,len(ay)):
+      ay[i] = 0
     
 def apply_gravity(v):
   global gravity
