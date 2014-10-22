@@ -6,7 +6,7 @@ pointB = (500,300)
 controlA = (200,400)
 controlB = (600,200)
 
-colour("red")
+color("red")
 line(pointA[0],pointA[1],pointB[0],pointB[1])
 
 line(pointA[0],pointA[1],controlA[0],controlA[1])
