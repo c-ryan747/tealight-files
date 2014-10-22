@@ -20,7 +20,7 @@ line(pointB[0],pointB[1],controlB[0],controlB[1])
 
 color("black")
 
-for i in xrange(1,50):
+for i in xrange(1,100):
   pointAC = partWayBetween(pointA, controlA, i)
   pointCB = partWayBetween(controlB, pointB, i)
   pointCC = partWayBetween(controlA, controlB, i)
