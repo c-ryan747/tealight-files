@@ -24,7 +24,7 @@ n = 1000
 
 for i in xrange(1,n+1):
   k = i*(100/n)
-  print 100/n
+  print n
   pointAC = partWayBetween(pointA, controlA, k)
   pointCB = partWayBetween(controlB, pointB, k)
   pointCC = partWayBetween(controlA, controlB, k)
