@@ -3,6 +3,9 @@ from tealight.art import (color, line, spot, circle, box, image, text, backgroun
 def partWayBetween(a,b,i):
   return (a[0] + (i*(b[0]-a[0])/100),a[1] + (i*(b[1]-a[1])/100))
 
+def drawSpot(point):
+  spot(point[0], point[1], 3)
+
 pointA = (300,500)
 pointB = (500,300)
 
@@ -21,8 +24,10 @@ for i in xrange(1,50):
   pointAC = partWayBetween(pointA, controlA, i)
   pointCB = partWayBetween(controlB, pointB, i)
   pointCC = partWayBetween(controlA, controlB, i)
-  spot(pointAC[0],pointAC[1],5)
-  spot(pointCB[0],pointCB[1],5)
-  spot(pointCC[0],pointCC[1],5)
+  
+  drawSpot(pointAC)
+  drawSpot(pointCB)
+  drawSpot(pointCC)
   
   pointACCC = partWayBetween(pointAC, pointCC, i)
+  drawSpot(pointACCC)
