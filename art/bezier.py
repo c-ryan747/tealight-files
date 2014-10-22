@@ -30,5 +30,5 @@ for i in xrange(1,50):
   drawSpot(pointCC)
   
   pointACCC = partWayBetween(pointAC, pointCC, i)
-  pointCCCB = partWayBetween(pointCC, pointBC, i)
+  pointCCCB = partWayBetween(pointCC, pointCB, i)
   drawSpot(pointACCC)
