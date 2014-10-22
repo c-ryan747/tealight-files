@@ -37,4 +37,5 @@ for i in xrange(1,100):
   
   pointFinal = partWayBetween(pointACCC, pointCCCB, i)
   line(lastDrawn[0],lastDrawn[1],pointFinal[0],pointFinal[1])
+  lastDrawn = pointFinal
   
