@@ -22,7 +22,7 @@ color("black")
 lastDrawn = pointA
 n = 1000.0
 
-for i in xrange(1,n+1):
+for i in xrange(1,int(n+1)):
   k = i*(100.0/n)
   print n
   pointAC = partWayBetween(pointA, controlA, k)
