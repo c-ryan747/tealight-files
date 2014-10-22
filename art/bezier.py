@@ -1,3 +1,3 @@
 from tealight.art import (color, line, spot, circle, box, image, text, background)
 
-line(100,100,
+line(100,100,150,150)
