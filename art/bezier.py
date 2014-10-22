@@ -32,4 +32,4 @@ def drawBezier(pointA,controlA,pointB,controlB,n):
     lastDrawn = pointFinal
   
 drawBezier((300,300),(500,300),(350,200),(450,150),1000.0)
-drawBezier((300,600),(350,500),(500,600),(450,450),1000.0)
+drawBezier((300,500),(350,400),(500,500),(450,350),1000.0)
