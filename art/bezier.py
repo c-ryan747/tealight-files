@@ -9,8 +9,8 @@ def drawSpot(point):
 pointA = (300,300)
 pointB = (500,300)
 
-controlA = (200,400)
-controlB = (600,400)
+controlA = (300,400)
+controlB = (500,400)
 
 color("red")
 #line(pointA[0],pointA[1],pointB[0],pointB[1])
