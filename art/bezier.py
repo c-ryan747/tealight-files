@@ -22,6 +22,7 @@ color("black")
 lastDrawn = pointA
 
 for i in xrange(1,100):
+  print i
   pointAC = partWayBetween(pointA, controlA, i)
   pointCB = partWayBetween(controlB, pointB, i)
   pointCC = partWayBetween(controlA, controlB, i)
