@@ -18,18 +18,21 @@ line(pointA[0],pointA[1],pointB[0],pointB[1])
 line(pointA[0],pointA[1],controlA[0],controlA[1])
 line(pointB[0],pointB[1],controlB[0],controlB[1])
 
-color("black")
 
 for i in xrange(1,100):
   pointAC = partWayBetween(pointA, controlA, i)
   pointCB = partWayBetween(controlB, pointB, i)
   pointCC = partWayBetween(controlA, controlB, i)
   
-  drawSpot(pointAC)
-  drawSpot(pointCB)
-  drawSpot(pointCC)
+  #drawSpot(pointAC)
+  #drawSpot(pointCB)
+  #drawSpot(pointCC)
   
   pointACCC = partWayBetween(pointAC, pointCC, i)
   pointCCCB = partWayBetween(pointCC, pointCB, i)
-  drawSpot(pointACCC)
-  drawSpot(pointCCCB)
+  #drawSpot(pointACCC)
+  #drawSpot(pointCCCB)
+  
+  pointFinal = partWayBetween(pointACCC, pointCCCB, i)
+  drawSpot(pointFinal)
+  
