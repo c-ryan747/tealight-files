@@ -33,3 +33,4 @@ def drawBezier(pointA,controlA,pointB,controlB,n):
   
 drawBezier((300,300),(500,300),(350,200),(450,150),1000.0)
 drawBezier((300,500),(350,400),(500,500),(450,350),1000.0)
+drawBezier((300,700),(300,550),(500,700),(500,850),1000.0)
