@@ -25,4 +25,4 @@ for i in xrange(1,50):
   spot(pointCB[0],pointCB[1],5)
   spot(pointCC[0],pointCC[1],5)
   
-  pointACCC = pointAC = (pointA[0] + (i*(controlA[0]-pointA[0])/100),pointA[1] + (i*(controlA[1]-pointA[1])/100))
+  pointACCC = partWayBetween(pointAC, pointCC, i)
