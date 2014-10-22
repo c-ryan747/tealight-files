@@ -6,39 +6,29 @@ def partWayBetween(a,b,i):
 def drawSpot(point):
   spot(point[0], point[1], 3)
 
-pointA = (300,300)
-pointB = (500,300)
-
-controlA = (350,200)
-controlB = (450,150)
-
-color("red")
-#line(pointA[0],pointA[1],pointB[0],pointB[1])
-
-line(pointA[0],pointA[1],controlA[0],controlA[1])
-line(pointB[0],pointB[1],controlB[0],controlB[1])
-
-color("black")
-lastDrawn = pointA
-n = 1000.0
-
-for i in xrange(1,int(n+1)):
-  k = i*(100.0/n)
-
-  pointAC = partWayBetween(pointA, controlA, k)
-  pointCB = partWayBetween(controlB, pointB, k)
-  pointCC = partWayBetween(controlA, controlB, k)
   
-  #drawSpot(pointAC)
-  #drawSpot(pointCB)
-  #drawSpot(pointCC)
+def drawBezier(pointA,controlA,pointB,controlB,1000.0):
+  color("red")
+
+  line(pointA[0],pointA[1],controlA[0],controlA[1])
+  line(pointB[0],pointB[1],controlB[0],controlB[1])
+
+  color("black")
+  lastDrawn = pointA
+
+  for i in xrange(1,int(n+1)):
+    k = i*(100.0/n)
+
+    pointAC = partWayBetween(pointA, controlA, k)
+    pointCB = partWayBetween(controlB, pointB, k)
+    pointCC = partWayBetween(controlA, controlB, k)
   
-  pointACCC = partWayBetween(pointAC, pointCC, k)
-  pointCCCB = partWayBetween(pointCC, pointCB, k)
-  #drawSpot(pointACCC)
-  #drawSpot(pointCCCB)
+    pointACCC = partWayBetween(pointAC, pointCC, k)
+    pointCCCB = partWayBetween(pointCC, pointCB, k)
   
-  pointFinal = partWayBetween(pointACCC, pointCCCB, k)
-  line(lastDrawn[0],lastDrawn[1],pointFinal[0],pointFinal[1])
-  lastDrawn = pointFinal
+    pointFinal = partWayBetween(pointACCC, pointCCCB, k)
   
+    line(lastDrawn[0],lastDrawn[1],pointFinal[0],pointFinal[1])
+    lastDrawn = pointFinal
+  
+drawBezier((300,300),(500,300),(350,200),(450,150))
