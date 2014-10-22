@@ -7,7 +7,7 @@ def drawSpot(point):
   spot(point[0], point[1], 3)
 
   
-def drawBezier(pointA,controlA,pointB,controlB,1000.0):
+def drawBezier(pointA,controlA,pointB,controlB,n):
   color("red")
 
   line(pointA[0],pointA[1],controlA[0],controlA[1])
@@ -31,4 +31,4 @@ def drawBezier(pointA,controlA,pointB,controlB,1000.0):
     line(lastDrawn[0],lastDrawn[1],pointFinal[0],pointFinal[1])
     lastDrawn = pointFinal
   
-drawBezier((300,300),(500,300),(350,200),(450,150))
+drawBezier((300,300),(500,300),(350,200),(450,150),1000.0)
