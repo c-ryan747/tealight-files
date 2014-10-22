@@ -19,10 +19,10 @@ color("black")
 
 for i in xrange(1,50):
   pointAC = partWayBetween(pointA, controlA, i)
-  pointBC = (controlB[0] + (i*(pointB[0]-controlB[0])/100),controlB[1] + (i*(pointB[1]-controlB[1])/100))
-  pointCC = (controlA[0] + (i*(controlB[0]-controlA[0])/100),controlA[1] + (i*(controlB[1]-controlA[1])/100))
+  pointCB = partWayBetween(controlB, pointB, i)
+  pointCC = partWayBetween(controlA, controlB, i)
   spot(pointAC[0],pointAC[1],5)
-  spot(pointBC[0],pointBC[1],5)
+  spot(pointCB[0],pointCB[1],5)
   spot(pointCC[0],pointCC[1],5)
   
   pointACCC = pointAC = (pointA[0] + (i*(controlA[0]-pointA[0])/100),pointA[1] + (i*(controlA[1]-pointA[1])/100))
