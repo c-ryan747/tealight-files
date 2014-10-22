@@ -13,7 +13,7 @@ controlA = (200,400)
 controlB = (600,400)
 
 color("red")
-line(pointA[0],pointA[1],pointB[0],pointB[1])
+#line(pointA[0],pointA[1],pointB[0],pointB[1])
 
 line(pointA[0],pointA[1],controlA[0],controlA[1])
 line(pointB[0],pointB[1],controlB[0],controlB[1])
