@@ -17,4 +17,5 @@ colour("black")
 for i in xrange(1,50):
   pointAC = (pointA[0] + (i*(controlA[0]-pointA[0])/100,pointA[1] + (i*(controlA[1]-pointA[1])/100))
   pointBC = (controlB[0] + (i*(pointB[0]-controlB[0])/100,controlB[1] + (i*(pointB[1]-controlB[1])/100))
-  spot
+  spot(pointAC[0],pointAC[1],5)
+  spot(pointBC[0],pointBC[1],5)
