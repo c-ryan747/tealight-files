@@ -20,22 +20,24 @@ line(pointB[0],pointB[1],controlB[0],controlB[1])
 
 color("black")
 lastDrawn = pointA
+n = 1000
 
-for i in xrange(1,101):
-  pointAC = partWayBetween(pointA, controlA, i)
-  pointCB = partWayBetween(controlB, pointB, i)
-  pointCC = partWayBetween(controlA, controlB, i)
+for i in xrange(1,n+1):
+  k = i*(100/n)
+  pointAC = partWayBetween(pointA, controlA, k)
+  pointCB = partWayBetween(controlB, pointB, k)
+  pointCC = partWayBetween(controlA, controlB, k)
   
   #drawSpot(pointAC)
   #drawSpot(pointCB)
   #drawSpot(pointCC)
   
-  pointACCC = partWayBetween(pointAC, pointCC, i)
-  pointCCCB = partWayBetween(pointCC, pointCB, i)
+  pointACCC = partWayBetween(pointAC, pointCC, k)
+  pointCCCB = partWayBetween(pointCC, pointCB, k)
   #drawSpot(pointACCC)
   #drawSpot(pointCCCB)
   
-  pointFinal = partWayBetween(pointACCC, pointCCCB, i)
+  pointFinal = partWayBetween(pointACCC, pointCCCB, k)
   line(lastDrawn[0],lastDrawn[1],pointFinal[0],pointFinal[1])
   lastDrawn = pointFinal
   
