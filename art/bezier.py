@@ -6,7 +6,7 @@ def partWayBetween(a,b,i):
 def drawSpot(point):
   spot(point[0], point[1], 3)
 
-pointA = (300,500)
+pointA = (300,300)
 pointB = (500,300)
 
 controlA = (200,400)
