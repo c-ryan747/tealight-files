@@ -1,10 +1,7 @@
-from tealight.art import (color, line, spot, circle, box, image, text, background)
+from tealight.art import (color, line)
 
 def partWayBetween(a,b,i):
   return (a[0] + (i*(b[0]-a[0])/100),a[1] + (i*(b[1]-a[1])/100))
-
-def drawSpot(point):
-  spot(point[0], point[1], 3)
 
   
 def drawBezier(pointA,controlA,pointB,controlB,n):
