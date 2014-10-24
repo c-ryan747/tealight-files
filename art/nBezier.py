@@ -14,7 +14,7 @@ def drawBezier(points,n):
 
     while len(tempPoints) > 1:
       for j in range(0,len(tempPoints)-2):
-        print j
+        print "j: " +str(j) +" tempPoints" + str(tempPoints)
         tempPoints[j] = partWayBetween(tempPoints[j],tempPoints[j+1],k)
       tempPoints.pop()
     line(lastDrawn[0],lastDrawn[1],tempPoints[0][0],tempPoints[0][1])
