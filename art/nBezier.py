@@ -9,7 +9,7 @@ def drawBezier(points,n):
   lastDrawn = points[0]
   
   for i in xrange(0,len(points)):
-    line(lastDrawn[0],lastDrawn[1],tempPoints[i][0],tempPoints[i][1])
+    line(lastDrawn[0],lastDrawn[1],points[i][0],points[i][1])
   color("black")
   lastDrawn = points[0]
   for i in xrange(1,int(n+1)):
