@@ -29,6 +29,6 @@ def drawBezier(points,n,drawControl):
     line(lastDrawn[0],lastDrawn[1],tempPoints[0][0],tempPoints[0][1])
     lastDrawn = tempPoints[0]
   
-drawBezier([(50,300),(50,500),(200,100),(200,300)],1000.0,False)
+drawBezier([(50,300),(50,500),(200,100),(200,500)],1000.0,False)
 drawBezier([(200,300),(300,300),(400,200),(300,200)],1000.0,False)
 #drawBezier([(400,300),(800,200),(100,200),(600,300)],1000.0)
