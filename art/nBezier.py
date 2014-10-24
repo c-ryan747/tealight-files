@@ -5,15 +5,19 @@ def partWayBetween(a,b,i):
 
   
 def drawBezier(points,n):
+  color("red")
+  lastDrawn = points[0]
+  
+  for i in xrange(0,len(tempPoints)):
+    line(lastDrawn[0],lastDrawn[1],tempPoints[i][0],tempPoints[i][1])
   color("black")
   lastDrawn = points[0]
-
   for i in xrange(1,int(n+1)):
     k = i*(100.0/n)
     tempPoints = list(points)
-
+    
     while len(tempPoints) > 1:
-      for j in range(0,len(tempPoints)-1):
+      for j in xrange(0,len(tempPoints)-1):
         tempPoints[j] = partWayBetween(tempPoints[j],tempPoints[j+1],k)
       
       tempPoints.pop()
