@@ -11,7 +11,7 @@ def drawBezier(points,n):
   for i in xrange(1,int(n+1)):
     k = i*(100.0/n)
     tempPoints = points
-    print tempPoints
+    print points
     while len(tempPoints) > 1:
       for j in range(0,len(tempPoints)-2):
         tempPoints[j] = partWayBetween(tempPoints[j],tempPoints[j+1],k)
