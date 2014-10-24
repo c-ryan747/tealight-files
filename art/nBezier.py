@@ -5,12 +5,12 @@ def partWayBetween(a,b,i):
 
   
 def drawBezier(points,n):
-  color("red")
-  lastDrawn = points[0]
+  #color("red")
+  #lastDrawn = points[0]
   
-  for i in xrange(0,len(points)):
-    line(lastDrawn[0],lastDrawn[1],points[i][0],points[i][1])
-    lastDrawn = points[i]
+  #for i in xrange(0,len(points)):
+    #line(lastDrawn[0],lastDrawn[1],points[i][0],points[i][1])
+    #lastDrawn = points[i]
     
   color("black")
   lastDrawn = points[0]
