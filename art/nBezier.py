@@ -4,13 +4,14 @@ def partWayBetween(a,b,i):
   return (a[0] + (i*(b[0]-a[0])/100),a[1] + (i*(b[1]-a[1])/100))
 
   
-def drawBezier(points,n):
-  #color("red")
-  #lastDrawn = points[0]
-  
-  #for i in xrange(0,len(points)):
-    #line(lastDrawn[0],lastDrawn[1],points[i][0],points[i][1])
-    #lastDrawn = points[i]
+def drawBezier(points,n,drawControl):
+  if drawControl:
+    color("red")
+    lastDrawn = points[0]
+    
+    for i in xrange(0,len(points)):
+      line(lastDrawn[0],lastDrawn[1],points[i][0],points[i][1])
+      lastDrawn = points[i]
     
   color("black")
   lastDrawn = points[0]
@@ -27,6 +28,6 @@ def drawBezier(points,n):
     line(lastDrawn[0],lastDrawn[1],tempPoints[0][0],tempPoints[0][1])
     lastDrawn = tempPoints[0]
   
-drawBezier([(50,300),(50,500),(200,100),(200,300)],1000.0)
-#drawBezier([(250,300),(350,300),(450,200),(350,200)],1000.0)
-drawBezier([(400,300),(800,200),(100,200),(600,300)],1000.0)
+drawBezier([(50,300),(50,500),(200,100),(200,300)],1000.0,no)
+drawBezier([(250,300),(350,300),(450,200),(350,200)],1000.0,yes)
+#drawBezier([(400,300),(800,200),(100,200),(600,300)],1000.0)
