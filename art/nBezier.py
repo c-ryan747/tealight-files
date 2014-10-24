@@ -30,5 +30,5 @@ def drawBezier(points,n,drawControl):
     lastDrawn = tempPoints[0]
   
 drawBezier([(50,300),(50,500),(200,100),(200,300)],1000.0,False)
-drawBezier([(200,300),(300,400),(400,300),(300,500)],1000.0,False)
+drawBezier([(200,300),(300,500),(400,300),(300,500)],1000.0,False)
 #drawBezier([(400,300),(800,200),(100,200),(600,300)],1000.0)
