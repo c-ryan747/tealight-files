@@ -10,7 +10,7 @@ def drawBezier(points,n):
 
   for i in xrange(1,int(n+1)):
     k = i*(100.0/n)
-    tempPoints = points
+    tempPoints = list(points)
     print points
     while len(tempPoints) > 1:
       for j in range(0,len(tempPoints)-2):
