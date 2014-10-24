@@ -15,6 +15,7 @@ def drawBezier(points,n,drawControl):
     
   color("black")
   lastDrawn = points[0]
+  
   for i in xrange(1,int(n+1)):
     k = i*(100.0/n)
     tempPoints = list(points)
@@ -28,6 +29,6 @@ def drawBezier(points,n,drawControl):
     line(lastDrawn[0],lastDrawn[1],tempPoints[0][0],tempPoints[0][1])
     lastDrawn = tempPoints[0]
   
-drawBezier([(50,300),(50,500),(200,100),(200,300)],1000.0,False)
+drawBezier([(50,300),(50,500),(200,100),(200,300)],1000.0,True)
 drawBezier([(250,300),(350,300),(450,200),(350,200)],1000.0,True)
 #drawBezier([(400,300),(800,200),(100,200),(600,300)],1000.0)
