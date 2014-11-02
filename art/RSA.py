@@ -23,7 +23,9 @@ d = (2*phin + 1)/e
 print "d = " + str(d)
     
 data = 89
+
 c = math.pow(data,e)%n
+print "c = " + str(c)
 
 decrypted = math.pow(c,d)%n
 
