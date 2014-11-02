@@ -34,5 +34,5 @@ def makeDataTree(data):
 
 
 Sample = randomGridData(16)
-print Sample[0:8][0:8]
 drawGrid(50,50,12,Sample)
+drawGrid(50,500,12,Sample[0:8][0:8])
