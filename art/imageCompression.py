@@ -9,6 +9,7 @@ def randomGridData(n):
   for i in xrange(0,n):
     for j in xrange(0,n):
       data[i][j] = randint(0,1)
+   
   return data 
 
 def drawGrid(x,y,n,s,data):
@@ -26,7 +27,7 @@ def makeDataTree(data):
   if len(data) == 1:
     return data
   else:
-    
+    return 0
 
 
 Sample = randomGridData(16)
