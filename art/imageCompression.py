@@ -1,8 +1,8 @@
 from tealight.art import (color, box)
 
-def drawGrid(n):
+def drawGrid(x,y,n,s):
   for i in xrange(0,n):
     for j in xrange(0,n):
-      box(i*3,j*3,2,2)
+      box(i*1.5*s,j*1.5*s,s,s)
       
-drawGrid(16)
+drawGrid(100,100,16,20)
