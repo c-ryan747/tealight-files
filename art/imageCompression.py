@@ -1,6 +1,9 @@
 from tealight.art import (color, box)
 from random import randint
 
+color("white")
+box(0,0,10000,10000)
+
 def randomGrid(x,y,n,s):
   data = []
   for i in xrange(0,n*n):
