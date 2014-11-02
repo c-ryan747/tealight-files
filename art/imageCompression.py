@@ -4,11 +4,11 @@ from random import randint
 color("white")
 box(0,0,10000,10000)
 
-def randomGrid(x,y,n,s):
+def randomGridData(n):
   data = []
   for i in xrange(0,n*n):
     data.append(randint(0,1))
-  drawGrid(x,y,n,s,data)
+  return data 
 
 def drawGrid(x,y,n,s,data):
   counter = 0
@@ -22,4 +22,5 @@ def drawGrid(x,y,n,s,data):
       counter += 1
       
       
-randomGrid(50,50,16,10)
+Sample = randomGridData(16)
+drawGrid(50,50,16,20,Sample)
