@@ -11,12 +11,11 @@ print "n = " + str(n)
 phin = ( q - 1 )*( p - 1 )
 print "phi(n) = " + str(phin)
 
-#foundE = False
-#while not foundE:
-#  e = randint(2,phin-1)
-#  if n%e != 0:
-#    foundE = True
-e = 3
+foundE = False
+while not foundE:
+  e = randint(2,phin-1)
+  if n%e != 0:
+    foundE = True
 print "e = " + str(e)
 
 d = (2*phin + 1)/e
