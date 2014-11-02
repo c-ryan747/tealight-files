@@ -1,5 +1,6 @@
 from random import randint
 import math
+from fractions import gcd
 
 def is_prime(n):
     if n % 2 == 0 and n > 2: 
@@ -19,7 +20,7 @@ print "phi(n) = " + str(phin)
 foundE = False
 while not foundE:
   e = randint(2,phin-1)
-  if n%e != 0 and is_prime(e):
+  if gcd(e,phin) == 1:
     foundE = True
 print "e = " + str(e)
 
