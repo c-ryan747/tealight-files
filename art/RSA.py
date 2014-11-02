@@ -17,8 +17,10 @@ print "phi(n) = " + str(phin)
 #  if n%e != 0:
 #    foundE = True
 e = 3
+print "e = " + str(e)
 
-d = (2*phin + 1)/e    
+d = (2*phin + 1)/e
+print "d = " + str(d)
     
 data = 89
 c = math.pow(data,e)%n
