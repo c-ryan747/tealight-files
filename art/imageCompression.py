@@ -17,7 +17,7 @@ def drawGrid(x,y,n,s,data):
       else:
         color("white")
       box(x + i*1.5*s,y + j*1.5*s,s,s)
-      counter++
+      counter += 1
       
       
 randomGrid(50,50,16,10)
