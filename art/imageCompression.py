@@ -23,4 +23,4 @@ def drawGrid(x,y,n,s,data):
       
       
 Sample = randomGridData(16)
-drawGrid(50,50,16,15,Sample)
+drawGrid(50,50,16,14,Sample)
