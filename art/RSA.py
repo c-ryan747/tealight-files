@@ -2,7 +2,7 @@ from random import randint
 import math
 
 # Two random 
-P = 53
+p = 53
 q = 59
 
 n = p*q
