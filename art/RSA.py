@@ -6,6 +6,7 @@ p = 53
 q = 59
 
 n = p*q
+print "n = " + str(n)
 phin = ( q - 1 )*( p - 1 )
 
 #foundE = False
@@ -22,5 +23,3 @@ c = math.pow(data,e)%n
 
 decrypted = math.pow(c,d)%n
 
-if decrypted == data:
-  print "Success"
