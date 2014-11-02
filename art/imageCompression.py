@@ -30,10 +30,10 @@ def makeDataTree(data):
     return data
   else:
     tempArray = [[0 for x in xrange(n/2)] for x in xrange(n/2)]
-    tempArray[0] = Sample[n/2:][:n/2]
-    tempArray[1] = Sample[:n/2][:n/2]
-    tempArray[2] = Sample[:n/2][n/2:n]
-    tempArray[3] = Sample[n/2:n][n/2:n]
+    tempArray[1][0] = Sample[n/2:][:n/2]
+    tempArray[0][0] = Sample[:n/2][:n/2]
+    tempArray[0][1] = Sample[:n/2][n/2:n]
+    tempArray[1][1] = Sample[n/2:n][n/2:n]
     makeDataTree(tempArray)
 
 
