@@ -29,10 +29,16 @@ def makeDataTree(data):
   if n == 1:
     return data
   else:
-    return 0
-        
+    tempArray = [[0 for x in xrange(n/2)] for x in xrange(n/2)]
+    tempArray[0] = Sample[n/2:][:n/2]
+    tempArray[1] = Sample[:n/2][:n/2]
+    tempArray[2] = Sample[:n/2][n/2:n]
+    tempArray[3] = Sample[n/2:n][n/2:n]
+    makeDataTree(tempArray)
 
 
 Sample = randomGridData(16)
+Tree = makeDataTree(Sample)
+print Tree
 drawGrid(50,50,12,Sample)
-drawGrid(50,500,12,Sample[0:8][0:8])
+#drawGrid(50,500,12,)
