@@ -30,6 +30,7 @@ def makeDataTree(data):
   else:
     for i in xrange(0,n/2):
       for j in xrange(0,n/2):
+        return 0
         
 
 
