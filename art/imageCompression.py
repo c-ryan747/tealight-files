@@ -12,8 +12,9 @@ def randomGridData(n):
    
   return data 
 
-def drawGrid(x,y,n,s,data):
+def drawGrid(x,y,s,data):
   counter = 0
+  n = len(data)
   for i in xrange(0,n):
     for j in xrange(0,n):
       if data[i][j] == 0:
@@ -34,4 +35,4 @@ def makeDataTree(data):
 
 Sample = randomGridData(16)
 print Sample[0:8][0:8]
-drawGrid(50,50,16,12,Sample)
+drawGrid(50,50,12,Sample)
