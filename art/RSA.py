@@ -7,7 +7,9 @@ q = 59
 
 n = p*q
 print "n = " + str(n)
+
 phin = ( q - 1 )*( p - 1 )
+print "phi(n) = " + str(phin)
 
 #foundE = False
 #while not foundE:
