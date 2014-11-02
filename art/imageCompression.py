@@ -29,7 +29,7 @@ def makeDataTree(data):
   if n == 1:
     return data
   else:
-    
+    return 0
         
 
 
