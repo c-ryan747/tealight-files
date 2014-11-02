@@ -8,7 +8,6 @@ def randomGrid(x,y,n,s):
   data = []
   for i in xrange(0,n*n):
     data.append(randint(0,1))
-  print data
   drawGrid(x,y,n,s,data)
 
 def drawGrid(x,y,n,s,data):
