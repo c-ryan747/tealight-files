@@ -28,7 +28,6 @@ def makeDataTree(data):
   if n == 1:
     return data
   else:
-    for k in xrange(0,n/2
     for i in xrange(0,n/2):
       for j in xrange(0,n/2):
         
