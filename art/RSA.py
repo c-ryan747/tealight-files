@@ -24,7 +24,7 @@ print "d = " + str(d)
     
 data = 89
 
-c = int(math.pow(data,e)%n)
+c = (data**e)%n
 print "c = " + str(c)
 
 decrypted = math.pow(c,d)%n
