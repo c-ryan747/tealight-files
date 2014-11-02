@@ -9,7 +9,7 @@ def randomGridData(n):
   print data
   for i in xrange(0,n):
     for j in xrange(0,n):
-    #data[i][j] = randint(0,1)
+      data[i][j] = randint(0,1)
   return data 
 
 def drawGrid(x,y,n,s,data):
