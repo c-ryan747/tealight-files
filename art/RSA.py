@@ -19,7 +19,7 @@ print "phi(n) = " + str(phin)
 foundE = False
 while not foundE:
   e = randint(2,phin-1)
-  if e%n != 0 and is_prime(e):
+  if n%e != 0 and is_prime(e):
     foundE = True
 print "e = " + str(e)
 
