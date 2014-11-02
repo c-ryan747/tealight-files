@@ -1,4 +1,11 @@
 from tealight.art import (color, box)
+from random import randint
+
+def randomGrid(x,y,n,s):
+  data = []
+  for i in xrange(0,n*n):
+    data.append(randint(0,1))
+  drawGrid(x,y,n,s,data)
 
 def drawGrid(x,y,n,s,data):
   counter = 0
@@ -11,4 +18,5 @@ def drawGrid(x,y,n,s,data):
       box(x + i*1.5*s,y + j*1.5*s,s,s)
       counter++
       
-drawGrid(50,50,16,10)
+      
+randomGrid(50,50,16,10)
