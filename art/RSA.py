@@ -1,6 +1,11 @@
 from random import randint
 import math
 
+def is_prime(n):
+    if n % 2 == 0 and n > 2: 
+        return False
+    return all(n % i for i in range(3, int(math.sqrt(n)) + 1, 2))
+
 # Two random 
 p = 53
 q = 59
@@ -14,7 +19,7 @@ print "phi(n) = " + str(phin)
 foundE = False
 while not foundE:
   e = randint(2,phin-1)
-  if n%e != 0:
+  if n%e != 0 and is_prime(e):
     foundE = True
 print "e = " + str(e)
 
