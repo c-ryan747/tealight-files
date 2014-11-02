@@ -30,6 +30,9 @@ print "e = " + str(e)
 
 d = (2*phin + 1)/e
 print "d = " + str(d)
+
+dd = (e**(-1))%phin
+print "dd = " + str(dd)
     
 data = 89
 
