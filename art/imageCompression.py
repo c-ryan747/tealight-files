@@ -24,11 +24,16 @@ def drawGrid(x,y,n,s,data):
       counter += 1
       
 def makeDataTree(data):
-  if len(data) == 1:
+  n = len(data)
+  if n == 1:
     return data
   else:
-    return 0
+    for k in xrange(0,n/2
+    for i in xrange(0,n/2):
+      for j in xrange(0,n/2):
+        
 
 
 Sample = randomGridData(16)
+print len(Sample)
 drawGrid(50,50,16,12,Sample)
