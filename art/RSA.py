@@ -28,4 +28,4 @@ c = int(math.pow(data,e)%n)
 print "c = " + str(c)
 
 decrypted = math.pow(c,d)%n
-
+print "decrypted = " + str(decrypted)
