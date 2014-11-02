@@ -1,6 +1,10 @@
 from random import randint
 import math
-from fractions import gcd
+
+def gcd(a, b):
+    while b:
+        a, b = b, a%b
+    return a
 
 def is_prime(n):
     if n % 2 == 0 and n > 2: 
