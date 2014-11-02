@@ -30,5 +30,5 @@ print "c = " + str(c)
 decrypted = (c**d)%n
 print "decrypted = " + str(decrypted)
 
-if data = decrypted:
+if data == decrypted:
   print "Success"
