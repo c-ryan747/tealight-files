@@ -9,7 +9,7 @@ n = p*q
 phin = (q-1)(p-1)
 
 foundE = False
-while !foundE:
+while not foundE:
   e = randint(2,phin-1)
   if n%e != 0:
     foundE = True
