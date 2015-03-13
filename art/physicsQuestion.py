@@ -20,14 +20,14 @@ def handle_frame():
   
   angle = math.atan2(-vy,vx) + (math.pi / 2)
   
-  fx =  1 * math.cos(angle)**2
-  fy = -1 * math.sin(angle)**2
+  fx =  1 * math.cos(angle)
+  fy = -1 * math.sin(angle)
   
   # math.sqrt(vx**2 + vy**2)
-  vx = math.sqrt(vx**2 + vy**2) * fx
-  vy = math.sqrt(vx**2 + vy**2) * fy
+  vx = vx + fx
+  vy = vy + fy
   
-  if n < 50:
+  if n < 6:
     print vx, vy
     n = n + 1
   
