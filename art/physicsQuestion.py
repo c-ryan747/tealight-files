@@ -18,12 +18,12 @@ def handle_frame():
   
   angle = math.atan2(-vy,vx) + (math.pi / 2)
   
-  fx = math.sqrt(vx**2 + vy**2) * math.cos(angle)**2
-  fy = math.sqrt(vx**2 + vy**2) * math.sin(angle)**2
+  fx = math.sqrt(vx**2 + vy**2) * math.cos(angle)
+  fy = math.sqrt(vx**2 + vy**2) * math.sin(angle)
   
   # math.sqrt(vx*vx + vy*vy)
-  vx =   fx
-  vy =  fy
+  vx = fx - vx
+  vy = fy - vy
   
   x = x + vx
   y = y + vy
