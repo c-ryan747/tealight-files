@@ -21,8 +21,8 @@ def handle_frame():
   
   angle = math.atan2(dy,dx) + (math.pi / 2)
   
-  fx = math.cos(angle)
-  fy = math.sin(angle)
+  fx = 10 *math.cos(angle)
+  fy = 10 *math.sin(angle)
   
   vx = fx 
   vy = fy 
