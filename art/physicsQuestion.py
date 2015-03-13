@@ -14,7 +14,7 @@ def handle_frame():
   global x,y,vx,vy,ax,ay,n
   
   color("white")
-  spot(x,y,1)
+  spot(x,y,2)
 
   
   angle = math.atan2(-vy,vx) + (math.pi / 2)
@@ -37,4 +37,4 @@ def handle_frame():
   
   
   color("blue")
-  spot(x,y,1)
+  spot(x,y,2)
