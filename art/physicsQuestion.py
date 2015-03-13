@@ -5,7 +5,7 @@ x =        [100,100,100,100,100,100,100]
 y =        [100,200,300,400,500,600,700]
 vx =       [5,5,5,5,5,5,5]
 vy =       [0,0,0,0,0,0,0]
-constant = [0,0.02,1.25,2.5,5,7.5,10]
+constant = [0,0.2,1.25,2.5,5,7.5,10]
 
 def handle_frame(): 
   global x,y,vx,vy,constant
@@ -14,7 +14,6 @@ def handle_frame():
       color("white")
       spot(x[i],y[i],2)
       
-      vx[i] = vx[i] + constant[i]
       
       angle = math.atan2(-vy[i],vx[i]) + (math.pi / 2)
   
@@ -28,10 +27,10 @@ def handle_frame():
       factor = math.sqrt(vx[i]**2 + vy[i]**2) / math.sqrt(vxa**2 + vya**2)
   
       vx[i] = vxa * factor 
-      vy[i] = vya * factor 
+      vy[i] = vya * factor
   
   
-      x[i] = x[i] + vx[i]
+      x[i] = x[i] + vx[i] + constant[i]
       y[i] = y[i] + vy[i]
   
   
