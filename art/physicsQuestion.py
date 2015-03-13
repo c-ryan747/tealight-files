@@ -24,8 +24,8 @@ def handle_frame():
   fy = -1 * math.sin(angle)
   
   # math.sqrt(vx**2 + vy**2)
-  vx = vx + fx
-  vy = vy + fy
+  vx = math.sqrt(vx**2 + vy**2) * fx
+  vy = math.sqrt(vx**2 + vy**2) * fy
   
   if n < 50:
     print vx, vy
