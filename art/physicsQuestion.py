@@ -32,7 +32,7 @@ def handle_frame():
   
   if n < 6:
     print vx, vy
-    n ++
+    n = n + 1
   
   
   x = x + vx
