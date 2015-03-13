@@ -30,7 +30,7 @@ def handle_frame():
       vy[i] = vya * factor
   
   
-      x[i] = x[i] + vx[i] 
+      x[i] = x[i] + vx[i] + constant[i]
       y[i] = y[i] + vy[i]
   
   
