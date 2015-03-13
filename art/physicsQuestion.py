@@ -32,7 +32,7 @@ def handle_frame():
   vy = vya * factor
   
   
-  x = x + vx + 5
+  x = x + vx + 7.5
   y = y + vy
   
   
