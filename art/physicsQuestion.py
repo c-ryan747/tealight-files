@@ -37,7 +37,7 @@ def handle_frame():
     n = n + 1
   
   
-  x = x + vx + 5
+  x = x + vx + 7
   y = y + vy
   
 
