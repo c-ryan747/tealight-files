@@ -5,7 +5,7 @@ x = [100,0,0,0,0]
 y = [100,200,300,400,500]
 vx = [5,5,5,5,5]
 vy = [0,0,0,0,0]
-constant = [0,2.5,5,7.5,10]
+constant = [0,1,5,7.5,10]
 
 def handle_frame(): 
   global x,y,vx,vy,constant
