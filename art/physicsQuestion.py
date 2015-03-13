@@ -21,12 +21,13 @@ def handle_frame():
   fx = (dx) / (math.sqrt(dx*dx + dy*dy))
   fy = (dy) / (math.sqrt(dx*dx + dy*dy))
   
+  vx = fx = vx
+  vy = fy + vy
   
-  x = x + fx + vx
-  y = y + fy + vy
+  x = x + vx
+  y = y + vy
   
-  vx = fx
-  vy = fy
+
   
   color("blue")
   
