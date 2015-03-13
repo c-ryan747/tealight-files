@@ -30,7 +30,6 @@ def handle_frame():
   
 
   
-
   
   color("blue")
   
