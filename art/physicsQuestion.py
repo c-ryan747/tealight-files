@@ -3,8 +3,8 @@ import math
 
 x = 300
 y = 300
-vx = math.sqrt(80)
-vy = math.sqrt(80)
+vx = math.sqrt(200)
+vy = math.sqrt(200)
 ax = 0
 ay = 0
 
@@ -23,8 +23,8 @@ def handle_frame():
   
   # math.sqrt(vx*vx + vy*vy)
   
-  vx = 50 * fx
-  vy = 50 * fy
+  vx = 10 * fx
+  vy = 10 * fy
   
   
   x = x + vx
