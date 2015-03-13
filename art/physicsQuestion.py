@@ -27,6 +27,9 @@ def handle_frame():
   x = x + vx + fx
   y = y + vy + fy
   
+  vx = fx
+  vy = fy
+  
 
   
   color("blue")
