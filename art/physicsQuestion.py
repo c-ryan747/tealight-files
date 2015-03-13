@@ -1,7 +1,7 @@
 from tealight.art import (color, line, spot, circle, box, image, text, background)
 import math
 
-x = 200
+x = 300
 y = 300
 vx = math.sqrt(2)
 vy = math.sqrt(2)
@@ -18,8 +18,8 @@ def handle_frame():
   
   angle = math.atan2(-vy,vx) + (math.pi / 2)
   
-  fx = 1 * math.cos(angle)
-  fy = -1 * math.sin(angle)
+  fx = 1 * math.sin(angle)
+  fy = -1 * math.cos(angle)
   
   vx = vx + fx
   vy = vy + fy
