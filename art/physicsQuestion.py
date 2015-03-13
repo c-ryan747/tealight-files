@@ -3,7 +3,7 @@ import math
 
 x = 300
 y = 300
-vx = 10
+vx = 50
 vy = 0
 ax = 0
 ay = 0
@@ -18,8 +18,8 @@ def handle_frame():
   
   angle = math.atan2(-vy,vx) + (math.pi / 4)
   
-  fx =  100 * math.cos(angle)
-  fy = -100 * math.sin(angle)
+  fx =  50 * math.cos(angle)
+  fy = -50 * math.sin(angle)
   
   # math.sqrt(vx*vx + vy*vy)
   
