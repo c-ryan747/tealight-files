@@ -34,5 +34,5 @@ def handle_frame():
       y[i] = y[i] + vy[i]
   
   
-      color("blue")
+      color("black")
       spot(x[i],y[i],2)
