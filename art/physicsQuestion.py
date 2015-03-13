@@ -3,7 +3,7 @@ import math
 
 x = 100
 y = 200
-vx = 100
+vx = 10
 vy = 0
 ax = 0
 ay = 0
