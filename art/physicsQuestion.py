@@ -23,8 +23,9 @@ def handle_frame():
   
   # math.sqrt(vx*vx + vy*vy)
   
-  vx = vx + fx
-  vy = vy + fy
+  vx = ((vx + fx) * math.sqrt(vx*vx + vy*vy)) / (vx + fx + fy + vy)
+  vy = ((vy + fy) * math.sqrt(vx*vx + vy*vy)) / (vx + fx + fy + vy)
+  
   
   x = x + vx
   y = y + vy
