@@ -1,40 +1,38 @@
 from tealight.art import (color, line, spot, circle, box, image, text, background)
 import math
 
-x = 100
-y = 400
-vx = 5
-vy = 0
-ax = 0
-ay = 0
+x = [100,0,0,0,0]
+y = [100,200,300,400,500]
+vx = [5,5,5,5,5]
+vy = [0,0,0,0,0]
 
-n = 1
 
 def handle_frame(): 
-  global x,y,vx,vy,ax,ay,n
-  
-  color("white")
-  spot(x,y,2)
+  global x,y,vx,vy
 
+  for i in range(0,len(x)):
+      color("white")
+      spot(x[i],y[i],2)
+      
+      
+      angle = math.atan2(-vy[i],vx[i]) + (math.pi / 2)
   
-  angle = math.atan2(-vy,vx) + (math.pi / 2)
-  
-  fx =  1 * math.cos(angle)
-  fy = -1 * math.sin(angle)
-  
-  
-  vxa = vx + fx
-  vya = vy + fy
-  
-  factor = math.sqrt(vx**2 + vy**2) / math.sqrt(vxa**2 + vya**2)
-  
-  vx = vxa * factor
-  vy = vya * factor
+      fx =  1 * math.cos(angle)
+      fy = -1 * math.sin(angle)
   
   
-  x = x + vx + 7.5
-  y = y + vy
+      vxa = vx[i] + fx
+      vya = vy[i] + fy
+  
+      factor = math.sqrt(vx[i]**2 + vy[i]**2) / math.sqrt(vxa**2 + vya**2)
+  
+      vx[i] = vxa * factor
+      vy[i] = vya * factor
   
   
-  color("blue")
-  spot(x,y,2)
+      x[i] = x[i] + vx[i] + 7.5
+      y[i] = y[i] + vy[i]
+  
+  
+      color("blue")
+      spot(x[i],y[i],2)
