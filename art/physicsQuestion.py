@@ -5,10 +5,10 @@ x = [100,0,0,0,0]
 y = [100,200,300,400,500]
 vx = [5,5,5,5,5]
 vy = [0,0,0,0,0]
-
+constant = [0,2.5,5,7.5,10]
 
 def handle_frame(): 
-  global x,y,vx,vy
+  global x,y,vx,vy,constant
 
   for i in range(0,len(x)):
       color("white")
@@ -30,7 +30,7 @@ def handle_frame():
       vy[i] = vya * factor
   
   
-      x[i] = x[i] + vx[i] + 7.5
+      x[i] = x[i] + vx[i] + constant[i]
       y[i] = y[i] + vy[i]
   
   
