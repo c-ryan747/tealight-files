@@ -8,6 +8,8 @@ vy = 0
 ax = 0
 ay = 0
 
+n = 1
+
 def handle_frame(): 
   global x,y,vx,vy,ax,ay
   
@@ -28,7 +30,10 @@ def handle_frame():
   vx = math.sqrt(vx**2 + vy**2) * (vxa / (abs(vxa) + abs(vya)))
   vy = math.sqrt(vx**2 + vy**2) * (vya / (abs(vxa) + abs(vya)))
   
-  print vx,vy
+  if n < 6:
+    print vx, vy
+    n ++
+  
   
   x = x + vx
   y = y + vy
