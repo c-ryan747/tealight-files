@@ -24,6 +24,7 @@ def handle_frame():
       fx =  1 * math.cos(angle)
       fy = -1 * math.sin(angle)
   
+      print fx,fy
   
       vxa = vx[i] + fx
       vya = vy[i] + fy
