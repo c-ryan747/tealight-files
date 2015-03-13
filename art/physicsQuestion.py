@@ -1,8 +1,8 @@
 from tealight.art import (color, line, spot, circle, box, image, text, background)
 import math
 
-x = 300
-y = 200
+x = 100
+y = 300
 vx = 0
 vy = 0
 ax = 0
