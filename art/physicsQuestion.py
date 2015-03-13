@@ -28,6 +28,8 @@ def handle_frame():
   
       vx[i] = vxa * factor + constant[i]
       vy[i] = vya * factor
+      
+      print math.sqrt(vx[i]**2 + vy[i]**2)
   
   
       x[i] = x[i] + vx[i] 
