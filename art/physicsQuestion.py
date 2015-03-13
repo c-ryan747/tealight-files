@@ -16,7 +16,7 @@ def handle_frame():
   spot(x,y,8)
 
   
-  angle = math.atan2(-vy,vx) + (math.pi / 100)
+  angle = math.atan2(-vy,vx) + (math.pi / 4)
   
   fx =  50 * math.cos(angle)
   fy = -50 * math.sin(angle)
