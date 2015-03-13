@@ -18,7 +18,7 @@ def handle_frame():
       color("white")
       spot(x[i],y[i],2)
       
-      vx[i] = vx[i] + constant[i]
+      vy[i] = vy[i] + constant[i]
       
       angle = math.atan2(-vy[i],vx[i]) + (math.pi / 2)
   
