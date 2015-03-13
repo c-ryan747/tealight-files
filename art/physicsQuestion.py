@@ -11,7 +11,7 @@ ay = 0
 n = 1
 
 def handle_frame(): 
-  global x,y,vx,vy,ax,ay
+  global x,y,vx,vy,ax,ay,n
   
   color("white")
   
