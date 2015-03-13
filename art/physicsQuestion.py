@@ -3,8 +3,8 @@ import math
 
 x = 200
 y = 300
-vx = 0
-vy = 1
+vx = math.sqrt(2)
+vy = math.sqrt(2)
 ax = 0
 ay = 0
 
