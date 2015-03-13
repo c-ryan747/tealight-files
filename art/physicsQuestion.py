@@ -4,7 +4,7 @@ import math
 x = 100
 y = 200
 vx = 0
-vy = 10
+vy = 0
 ax = 0
 ay = 0
 
@@ -14,21 +14,15 @@ def handle_frame():
   color("white")
   
   spot(x,y,8)
-  
-  dx = 200 - x
-  dy = 200 - y
-  
+
   
   angle = math.atan2(dy,dx) + (math.pi / 2)
   
-  fx = 1 *math.cos(angle)
-  fy = 1 *math.sin(angle)
+  fx = 10 *math.cos(angle)
+  fy = 10 *math.sin(angle)
   
-  vx = fx 
-  vy = fy 
-  
-  x = x + vx + 0 
-  y = y + vy
+  x = x + fx
+  y = y + fy
   
 
   
