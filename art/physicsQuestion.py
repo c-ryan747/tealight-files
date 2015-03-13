@@ -24,7 +24,7 @@ def handle_frame():
   vx = fx + vx
   vy = fy + vy
   
-  x = x + vx + 10
+  x = x + vx + 15
   y = y + vy
   
 
