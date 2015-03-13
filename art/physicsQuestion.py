@@ -5,7 +5,7 @@ x =        [100,100,100,100,100,100,100]
 y =        [100,200,300,400,500,600,700]
 vx =       [5,5,5,5,5,5,5]
 vy =       [0,0,0,0,0,0,0]
-constant = [0,0.625,1.25,2.5,5,7.5,10]
+constant = [0,0.01,1.25,2.5,5,7.5,10]
 
 def handle_frame(): 
   global x,y,vx,vy,constant
@@ -26,7 +26,7 @@ def handle_frame():
   
       factor = math.sqrt(vx[i]**2 + vy[i]**2) / math.sqrt(vxa**2 + vya**2)
   
-      vx[i] = vxa * factor + constant[i]
+      vx[i] = vxa * factor 
       vy[i] = vya * factor
   
   
