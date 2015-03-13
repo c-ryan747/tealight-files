@@ -27,7 +27,7 @@ def handle_frame():
   vx = vx + fx
   vy = vy + fy
   
-  if n < 6:
+  if n < 50:
     print vx, vy
     n = n + 1
   
