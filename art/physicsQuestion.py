@@ -4,7 +4,7 @@ import math
 x = 100
 y = 200
 vx = 0
-vy = 0
+vy = 10
 ax = 0
 ay = 0
 
@@ -15,12 +15,13 @@ def handle_frame():
   
   spot(x,y,8)
   
-    
-  vx = vx + ax
-  vy = vy + ay
+  dx = 200 - x
+  dy = 200 - y
   
-  x = x + vx
-  y = y + vy
+  fx = (dx) / (math.sqrt(dx*dx + dy*dy))
+  fy = (dy) / (math.sqrt(dx*dx + dy*dy))
+  
+  
   
   color("blue")
   
