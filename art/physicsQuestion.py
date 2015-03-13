@@ -7,9 +7,13 @@ vx =       [-5,-5,-5,-5,-5,-5,-5]
 vy =       [0,0,0,0,0,0,0]
 constant = [0,0.05,1.25,2.5,5,7.5,10]
 
+n = 0
+
 def handle_frame(): 
   global x,y,vx,vy,constant
-
+  
+  n = n + 1
+  
   for i in range(0,len(x)):
       color("white")
       spot(x[i],y[i],2)
@@ -30,7 +34,7 @@ def handle_frame():
       vy[i] = vya * factor
   
   
-      x[i] = x[i] + vx[i] + constant[i]
+      x[i] = x[i] + vx[i] + constant[i] * n
       y[i] = y[i] + vy[i]
   
   
