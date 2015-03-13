@@ -10,7 +10,7 @@ constant = [0,0.05,1.25,2.5,5,7.5,10]
 n = 0
 
 def handle_frame(): 
-  global x,y,vx,vy,constant
+  global x,y,vx,vy,constant,n
   
   n = n + 1
   
