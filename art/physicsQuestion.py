@@ -2,7 +2,7 @@ from tealight.art import (color, line, spot, circle, box, image, text, backgroun
 import math
 
 x = 200
-y = 200
+y = 300
 vx = 0
 vy = 10
 ax = 0
