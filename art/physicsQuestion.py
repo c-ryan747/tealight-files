@@ -4,7 +4,7 @@ import math
 x = 400
 y = 400
 vx = 0
-vy = 0
+vy = 10
 ax = 0
 ay = 0
 
