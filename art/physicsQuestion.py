@@ -3,8 +3,8 @@ import math
 
 x = 400
 y = 400
-vx = 0
-vy = 10
+vx = 10
+vy = 0
 ax = 0
 ay = 0
 
