@@ -21,12 +21,12 @@ def handle_frame():
   fx =  1 * math.cos(angle)
   fy = -1 * math.sin(angle)
   
-  # math.sqrt(vx*vx + vy*vy)
+  # math.sqrt(vx**2 + vy**2)
   vxa = vx + fx
   vya = vy + fy
   
-  vx = vxa / (vxa + vya)
-  vy = vya / (vxa + vya)
+  vx = vxa * (math.sqrt(vx**2 + vy**2) / math.sqrt(vxa**2 + vya**2))
+  vy = vya * (math.sqrt(vx**2 + vy**2) / math.sqrt(vxa**2 + vya**2))
   
   
   x = x + vx
