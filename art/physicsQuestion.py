@@ -1,7 +1,7 @@
 from tealight.art import (color, line, spot, circle, box, image, text, background)
 import math
 
-x = 400
+x = 0
 y = 400
 vx = 5
 vy = 0
@@ -14,7 +14,6 @@ def handle_frame():
   global x,y,vx,vy,ax,ay,n
   
   color("white")
-  
   spot(x,y,8)
 
   
@@ -23,7 +22,7 @@ def handle_frame():
   fx =  1 * math.cos(angle)
   fy = -1 * math.sin(angle)
   
-  # math.sqrt(vx**2 + vy**2)
+  
   vxa = vx + fx
   vya = vy + fy
   
@@ -32,18 +31,10 @@ def handle_frame():
   vx = vxa * factor
   vy = vya * factor
   
-  if n < 6:
-    print vx, vy
-    n = n + 1
   
-  
-  x = x + vx + 7
+  x = x + vx + 3
   y = y + vy
-  
-
   
   
   color("blue")
-  
   spot(x,y,8)
-  
